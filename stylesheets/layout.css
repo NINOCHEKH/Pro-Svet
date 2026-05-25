@@ -1,10 +1,3 @@
-:root {
-  --bg-color: #030303;
-  --grid-color: #3b3b3b;
-  --glow-color: #d946ef;
-  --text-color: #fff;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -23,10 +16,23 @@ body {
   overflow-y: auto;
 }
 
+.navMenu {
+  width: 100%;
+  height: 8vw;
+  background-color: #6b86e7;
+  z-index: -1;
+}
+
+.logoNav {
+  width: 25vw;
+  height: auto;
+  max-width: 400px;
+}
+
 h2 {
-  font-family: "TTNormsProRegular";
-  font-style: normal;
-  font-weight: normal;
+  font-family: "TTNormsPro";
+  font-style: medium;
+  font-weight: 500;
   font-size: 5vw;
   color: #ff0000;
   white-space: nowrap;
