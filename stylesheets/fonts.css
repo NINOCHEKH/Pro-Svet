@@ -1,6 +1,6 @@
 /* medium*/
 @font-face {
-  font-family: "TTNormsPro";
+  font-family: "TTNormsProM";
   src: url("../fonts/TTNormsPro-Medium.ttf") format("truetype");
   font-style: medium;
   font-weight: 500;
@@ -9,7 +9,7 @@
 
 /*regular*/
 @font-face {
-  font-family: "TTNormsPro";
+  font-family: "TTNormsProN";
   src: url("../fonts/TTNormsPro-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
@@ -18,7 +18,7 @@
 
 /*light*/
 @font-face {
-  font-family: "TTNormsPro";
+  font-family: "TTNormsProL";
   src: url("../fonts/TTNormsPro-Light.ttf") format("truetype");
   font-style: light;
   font-weight: 200;

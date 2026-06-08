@@ -9,7 +9,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
-  display: flex;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
@@ -18,26 +17,326 @@ body {
 
 .navMenu {
   width: 100%;
-  height: 8vw;
+  height: 5.3vw;
   background-color: #6b86e7;
-  z-index: -1;
+  border-radius: 0 0 1vw 1vw;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.logoNav {
-  width: 25vw;
+.logoNav img {
+  width: 7vw;
   height: auto;
-  max-width: 400px;
+  z-index: 100;
+  padding-top: 0.4vw;
+  z-index: 9;
 }
 
-h2 {
-  font-family: "TTNormsPro";
-  font-style: medium;
-  font-weight: 500;
-  font-size: 5vw;
-  color: #ff0000;
-  white-space: nowrap;
+.logoNavContainer {
+  background-color: #ffffff;
+  border-radius: 1.3vw;
+  padding: 0vw 2.7vw;
+  display: inline-block;
+  margin: 2vw;
+}
+.strokeNav {
+  width: 6vw;
+  height: 0.08vw;
+  background: linear-gradient(90deg, #ffffff, #ffc4c9);
+  margin: -2vw;
+  z-index: 100;
+}
+
+.aboutNavContainer {
+  border: 0.1vw solid #ffc4c9;
+  border-radius: 0.8vw;
+  padding: 0.7vw 2.3vw;
+  display: inline-block;
+  margin-left: 2vw;
+  font-family: "TTNormsProM";
+  font-size: 1.2vw;
+  outline-offset: -1vw;
+  color: #ffc4c9;
+}
+
+.otherNavContainer {
+  border: 0.1vw solid #ffc4c9;
+  border-radius: 0.8vw;
+  padding: 0.7vw 2.3vw;
+  display: inline-block;
+  margin-left: 1vw;
+  font-family: "TTNormsProM";
+  font-size: 1.2vw;
+  outline-offset: -1vw;
+  color: #ffc4c9;
+}
+
+.main_menu {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.life {
+  width: 100%;
+  z-index: 1;
+  height: 40vw;
+  background-image: url(../images/Back.png);
+  background-size: cover;
+  border-radius: 2.5vw;
+  padding-top: 15vw;
   position: relative;
-  top: auto;
-  left: auto;
-  transform: none;
+  overflow: hidden;
+}
+
+/* .life::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 80, 255, 0.35);
+  border-radius: inherit;
+  z-index: 10;
+  pointer-events: none;
+} */
+
+.lifeText {
+  white-space: nowrap;
+  letter-spacing: -0.5vw;
+  /* height: 50vw; */
+  font-size: 10vw;
+  text-align: center;
+  font-family: "TTNormsProM";
+  transform: scaleY(1.9);
+  display: inline-block;
+  color: #ffffff;
+  overflow-x: hidden;
+  margin-bottom: 2.4vw;
+  margin-top: 3.7vw;
+  animation: textLife 7s linear infinite;
+}
+
+@keyframes textLife {
+  0% {
+    transform: translateX(0) scaleY(1.9);
+  }
+  100% {
+    transform: translateX(-50%) scaleY(1.9);
+  }
+}
+
+.lifeImgAndText {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  align-items: center;
+  animation: lifeI-and-text 7s linear infinite;
+}
+
+@keyframes lifeI-and-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-114.3%);
+  }
+}
+
+.lifeTextLittle {
+  white-space: nowrap;
+  letter-spacing: -0.2vw;
+  font-size: 2vw;
+  font-family: "TTNormsProN";
+  color: #ffffff;
+  display: inline-block;
+  line-height: 1;
+}
+
+.lifeImgLittle {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
+}
+
+.lifeImgLittle img {
+  width: 3vw;
+  height: auto;
+  display: block;
+}
+
+.life {
+  position: relative;
+  overflow: hidden;
+}
+
+.lifeEraser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  border-radius: inherit;
+  pointer-events: auto;
+  display: block;
+}
+
+.lifeWhiteSector {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 36vw;
+  z-index: 150;
+  pointer-events: none;
+  transition: transform 0.6s ease;
+}
+
+.lifeWhiteSector.is-up {
+  transform: translateY(-25vw);
+}
+
+.lifeWhiteSectorInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  background-image: url("../images/StarsWhite.png");
+  background-size: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  border-radius: 0 0 2.5vw 2.5vw;
+}
+
+.lifeWhiteSector:not(.is-up) .lifeWhiteSectorInner {
+  animation: whiteSectorIdleMove 6s ease-in-out infinite;
+}
+
+.lifeWhiteSector.is-up .lifeWhiteSectorInner {
+  animation: none;
+}
+
+.lifeWhiteButton {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  width: 4.5vw;
+  height: 4.5vw;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  background-color: #6b86e7;
+  z-index: 160;
+  pointer-events: auto;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+@keyframes whiteSectorIdleMove {
+  0% {
+    transform: translateY(0);
+  }
+
+  12% {
+    transform: translateY(-1.2vw);
+  }
+
+  24% {
+    transform: translateY(0);
+  }
+
+  36% {
+    transform: translateY(-1.2vw);
+  }
+
+  48% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.lifeWhiteButton .hover-ripple {
+  position: absolute;
+  left: var(--hover-x, 50%);
+  top: var(--hover-y, 50%);
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  background-color: #ff8fa3;
+  transform: translate(-50%, -50%) scale(0);
+  animation: buttonHoverRipple 0.45s ease-out forwards;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes buttonHoverRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.lifeWhiteButton .hover-ripple.is-leaving {
+  animation: buttonHoverRippleOut 0.45s ease-out forwards;
+}
+
+@keyframes buttonHoverRippleOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+}
+
+.lifeWhiteArrow {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-left: 0.25vw solid #ffffff;
+  border-top: 0.25vw solid #ffffff;
+  border-radius: 0.15vw;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 2;
+}
+.lifeWhiteButton .ripple,
+.lifeWhiteButton .hover-ripple {
+  border: none;
+}
+
+.lifeWhiteArrow {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-left: 0.25vw solid #ffffff;
+  border-top: 0.25vw solid #ffffff;
+  border-radius: 0.15vw;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.lifeWhiteSector.is-up .lifeWhiteArrow {
+  top: 45%;
+  transform: translate(-50%, -50%) rotate(225deg);
 }
