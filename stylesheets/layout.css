@@ -86,7 +86,7 @@ body {
   height: 40vw;
   background-image: url(../images/Back.png);
   background-size: cover;
-  border-radius: 2.5vw;
+  /* border-radius: 2.5vw; */
   padding-top: 15vw;
   position: relative;
   overflow: hidden;
@@ -207,7 +207,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  background-image: url("../images/StarsWhite.png");
   background-size: auto;
   background-position: top;
   background-repeat: no-repeat;
@@ -339,4 +338,410 @@ body {
 .lifeWhiteSector.is-up .lifeWhiteArrow {
   top: 45%;
   transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.lifeWhiteSector {
+  pointer-events: auto;
+}
+
+.lifeWhiteSectorInner {
+  overflow: visible;
+}
+
+.lifeWhiteSector {
+  pointer-events: auto;
+}
+
+.starAnimationBox {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 0 0 2.5vw 2.5vw;
+}
+
+.starAnimation {
+  position: absolute;
+  top: -10vw;
+  height: auto;
+  pointer-events: auto;
+  cursor: pointer;
+  animation-name: starFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* .starAnimation:hover {
+  opacity: 0;
+} */
+
+.starAnimation.is-disappearing {
+  opacity: 0;
+  transform: scale(0.4);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+@keyframes starFall {
+  0% {
+    transform: translateY(-10vw) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(48vw) rotate(360deg);
+  }
+}
+
+.lifeWhiteTitle {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  letter-spacing: -0.3vw;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 3;
+  font-family: "TTNormsProM";
+  font-size: 7vw;
+  line-height: 0.85;
+  text-align: center;
+  color: #000000;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.lifeWhiteSubtitle {
+  position: absolute;
+  left: 50%;
+  bottom: 3.8vw;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-family: "TTNormsProN";
+  font-size: 1.6vw;
+  line-height: 1;
+  text-align: center;
+  color: #000000;
+  opacity: 0.5;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* анимация whiteButton  */
+.aboutNavContainer,
+.otherNavContainer {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.aboutNavContainer a,
+.otherNavContainer a {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navHoverRipple {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18vw;
+  height: 18vw;
+  border-radius: 50%;
+  background-color: #fda1b2;
+  transform: translate(-50%, -50%) scale(0);
+  animation: navRippleIn 0.45s ease-out forwards;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.navHoverRipple.is-leaving {
+  animation: navRippleOut 0.45s ease-out forwards;
+}
+
+@keyframes navRippleIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes navRippleOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+/* третий сектор */
+.blueSector {
+  .blueSector {
+    width: 100%;
+    min-height: 34vw;
+    padding-top: 9vw;
+    background-color: #6b86e7;
+    border-radius: 0 0 2.5vw 2.5vw;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+}
+
+.blueSectorTitle {
+  font-family: "TTNormsProN";
+  font-size: 3vw;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 5.5vw;
+}
+
+.problemCardsWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.problemCardsTrack {
+  display: flex;
+  width: max-content;
+  animation: problemCardsMarquee 18s linear infinite;
+}
+
+.problemCards {
+  display: flex;
+  gap: 2.1vw;
+  width: max-content;
+  padding-right: 2.1vw;
+}
+
+.problemCard {
+  min-width: 11vw;
+  height: 7.3vw;
+  padding: 0 2vw;
+  border: 0.12vw solid #ff9bae;
+  border-radius: 0.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TTNormsProM";
+  font-size: 2.3vw;
+  line-height: 1;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+@keyframes problemCardsMarquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animatedProblemCard {
+  position: relative;
+  overflow: hidden;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.problemDefaultText {
+  transition: opacity 0.2s ease;
+}
+
+.problemWords {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  color: #6b86e7;
+  animation: problemWordsMove 3s linear infinite;
+}
+
+.problemWords span {
+  height: 7.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.animatedProblemCard:hover {
+  background-color: #ffffff;
+  color: #6b86e7;
+}
+
+.animatedProblemCard:hover .problemDefaultText {
+  opacity: 0;
+}
+
+.animatedProblemCard:hover .problemWords {
+  opacity: 1;
+}
+
+@keyframes problemWordsMove {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-21.9vw);
+  }
+}
+
+.problemCardsTrack:has(.problemCard:hover) {
+  animation-play-state: paused;
+}
+
+/* футер */
+.footer {
+  width: 100%;
+  padding: 4vw 5vw 3vw;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "TTNormsProN";
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1fr 1.4fr;
+  gap: 4vw;
+  align-items: start;
+}
+
+.footerColumn,
+.footerContacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer h3 {
+  margin-bottom: 1.8vw;
+  font-family: "TTNormsProM";
+  font-size: 2vw;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.footer a {
+  margin-bottom: 0.7vw;
+  font-size: 1.35vw;
+  line-height: 1.1;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fda1b2;
+}
+
+.footerContacts img {
+  width: 13vw;
+  height: auto;
+  margin-bottom: 2vw;
+}
+
+.footerContacts h3 {
+  margin-bottom: 1.4vw;
+}
+
+.footerContacts a {
+  margin-top: -0.4vw;
+}
+
+.footerBottom {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  margin-top: 6vw;
+}
+
+.footerBottom img {
+  width: 8.5vw;
+  height: auto;
+}
+
+.footerBottom p {
+  max-width: 55vw;
+  font-size: 0.8vw;
+  line-height: 1.2;
+}
+
+.footerCopyright {
+  margin-top: 2.2vw;
+  font-size: 0.95vw;
+  line-height: 1.2;
+}
+
+.aboutNavContainer,
+.otherNavContainer {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.aboutNavContainer a,
+.otherNavContainer a {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navHoverRipple {
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  border-radius: 50%;
+  background-color: #fda1b2;
+  transform: translate(-50%, -50%) scale(0);
+  animation: navRippleIn 0.45s ease-out forwards;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.navHoverRipple.is-leaving {
+  animation: navRippleOut 0.45s ease-out forwards;
+}
+
+@keyframes navRippleIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes navRippleOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
 }
