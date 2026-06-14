@@ -8,110 +8,115 @@
     <script defer src="javascripts/scripts.js"></script>
   </head>
   <body>
-    <nav class="main_menu">
-      <a href="index.html">Главная страницы</a>
-      <a href="about.html" class="active">О нас</a>
-      <a href="specialists.html">Специалисты</a>
-      <a href="subscribe.html">Подписки</a>
-      <a href="merch.html">Мерч</a>
-    </nav>
-
-    <main class="aboutPage">
-      <section class="aboutCards">
-        <article class="aboutCard card-help is-active" data-card="help">
-          <button class="aboutCardTab">Наша помощь</button>
-
-          <div class="aboutCardContent">
-            <h1>Наша помощь это...</h1>
-
-            <div class="aboutTextGrid">
-              <h2>Осознанность без давления</h2>
-              <p>
-                Ты проходишь короткий тест каждый день. Сайт анализирует твоё
-                состояние, показывает динамику и передаёт данные твоему
-                специалисту.
-              </p>
-
-              <h2>Одна подписка на всё</h2>
-              <p>
-                Одна подписка — и ты можешь общаться с психологом, психиатром и
-                другими профессионалами. Не нужно платить каждому отдельно.
-              </p>
-            </div>
+    <section class="navMenu">
+      <nav class="main_menu">
+        <a href="index.html" class="logoNav">
+          <div class="logoNavContainer">
+            <img src="images/logoNav.svg" alt="Логотип" />
           </div>
-        </article>
+        </a>
 
-        <article class="aboutCard card-alone" data-card="alone">
-          <button class="aboutCardTab">Ты не один</button>
+        <div class="strokeNav"></div>
 
-          <div class="aboutCardContent">
-            <h1>Как бы ни было тяжело — знай:</h1>
-
-            <div class="aboutTextGrid lightText">
-              <h2>Тебе готовы помочь</h2>
-              <p>
-                Ты делаешь важный шаг каждый день. Мы рядом, чтобы поддержать, а
-                специалист — чтобы помочь разобраться.
-              </p>
-
-              <h2>Сила духа — ключ к свободе</h2>
-              <p>
-                А первый шаг к свободе — признать, что сейчас нужна опора. Мы
-                здесь, чтобы её дать.
-              </p>
-            </div>
+        <div class="about">
+          <div class="aboutNavContainer">
+            <a href="about.html">О нас</a>
           </div>
-        </article>
-
-        <article class="aboutCard card-reviews" data-card="reviews">
-          <button class="aboutCardTab">Отзывы</button>
-
-          <div class="aboutCardContent">
-            <h1>О нас лучше скажут те, кто доверился</h1>
-            <p class="reviewsLead">
-              Отзывы людей с самыми разными жизненными ситуациями. Они — живой
-              пример, что выход есть из любой проблемы.
-            </p>
-
-            <div class="reviewCards">
-              <div class="reviewCard">
-                <strong>Марина Спивакова</strong>
-                <p>
-                  Пришла сюда после страшной аварии. Чудесный психолог помог
-                  мне!
-                </p>
-              </div>
-
-              <div class="reviewCard">
-                <strong>Аноним</strong>
-                <p>
-                  После расставания стало легче. Благодаря Про Свету меня
-                  услышали.
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="aboutCard card-collab" data-card="collab">
-          <button class="aboutCardTab">Коллаборации</button>
-
-          <div class="aboutCardContent">
-            <h1>Коллаборации</h1>
-            <p>
-              Мы открыты к партнёрствам, образовательным проектам и совместным
-              инициативам в сфере заботы о ментальном здоровье.
-            </p>
-          </div>
-        </article>
-      </section>
-
-      <section class="aboutPromo">
-        <div>
-          при регистрации первый месяц бесплатно! &nbsp;&nbsp; С 16 апреля по 16
-          мая
         </div>
-      </section>
-    </main>
+
+        <div class="about">
+          <div class="otherNavContainer">
+            <a href="specialists.html">Специалисты</a>
+          </div>
+        </div>
+
+        <div class="about">
+          <div class="otherNavContainer">
+            <a href="subscribe.html">Подписки</a>
+          </div>
+        </div>
+
+        <div class="about">
+          <div class="otherNavContainer">
+            <a href="merch.html">Мерч</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="aboutAccordion">
+      <input type="radio" name="aboutSlide" id="slideHelp" checked />
+      <input type="radio" name="aboutSlide" id="slideAlone" />
+      <input type="radio" name="aboutSlide" id="slideReviews" />
+      <input type="radio" name="aboutSlide" id="slideCollab" />
+
+      <article class="aboutSlide aboutSlideHelp">
+        <label class="aboutSlideTab" for="slideHelp">Наша помощь</label>
+
+        <div class="aboutSlideContent">
+          <h1>Наша помощь это...</h1>
+
+          <div class="aboutSlideGrid">
+            <h2>Осознанность без давления</h2>
+            <p>
+              Ты проходишь короткий тест каждый день. Сайт анализирует твоё
+              состояние, показывает динамику и передаёт данные твоему
+              специалисту.
+            </p>
+
+            <h2>Одна подписка на всё</h2>
+            <p>
+              Одна подписка — и ты можешь общаться с психологом, психиатром и
+              другими профессионалами.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="aboutSlide aboutSlideAlone">
+        <label class="aboutSlideTab" for="slideAlone">Ты не один</label>
+
+        <div class="aboutSlideContent">
+          <h1>Как бы ни было тяжело — знай:</h1>
+
+          <div class="aboutSlideGrid">
+            <h2>Тебе готовы помочь</h2>
+            <p>
+              Ты делаешь важный шаг каждый день. Мы рядом, чтобы поддержать, а
+              специалист — чтобы помочь разобраться.
+            </p>
+
+            <h2>Сила духа — ключ к свободе</h2>
+            <p>
+              Первый шаг к свободе — признать, что сейчас нужна опора. Мы здесь,
+              чтобы её дать.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="aboutSlide aboutSlideReviews">
+        <label class="aboutSlideTab" for="slideReviews">Отзывы</label>
+
+        <div class="aboutSlideContent">
+          <h1>О нас лучше скажут те, кто доверился</h1>
+          <p class="aboutSlideLead">
+            Отзывы людей с самыми разными жизненными ситуациями.
+          </p>
+        </div>
+      </article>
+
+      <article class="aboutSlide aboutSlideCollab">
+        <label class="aboutSlideTab" for="slideCollab">Коллаборации</label>
+
+        <div class="aboutSlideContent">
+          <h1>Коллаборации</h1>
+          <p>
+            Мы открыты к партнёрствам, образовательным проектам и совместным
+            инициативам.
+          </p>
+        </div>
+      </article>
+    </section>
   </body>
 </html>

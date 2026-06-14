@@ -745,3 +745,164 @@ body {
     transform: translate(-50%, -50%) scale(0);
   }
 }
+
+/* СТРАНИЦА О НАС */
+.aboutAccordion {
+  --tab: 5.6vw;
+  position: relative;
+  width: 100%;
+  height: 40vw;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.aboutAccordion input {
+  display: none;
+}
+
+.aboutSlide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100vw - var(--tab));
+  height: 40vw;
+  border-radius: 2.5vw;
+  overflow: hidden;
+  transition: transform 0.7s ease;
+}
+
+.aboutSlideTab {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--tab);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  font-family: "TTNormsProM";
+  font-size: 2vw;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.aboutSlideContent {
+  padding: 7vw 8vw 5vw 11vw;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.aboutSlideContent h1 {
+  margin-bottom: 4vw;
+  font-family: "TTNormsProM";
+  font-size: 2.4vw;
+}
+
+.aboutSlideGrid {
+  display: grid;
+  grid-template-columns: 23vw 25vw;
+  gap: 4vw;
+}
+
+.aboutSlideGrid h2 {
+  font-family: "TTNormsProN";
+  font-size: 1.8vw;
+  font-weight: 400;
+}
+
+.aboutSlideGrid p,
+.aboutSlideContent p {
+  font-family: "TTNormsProN";
+  font-size: 1.25vw;
+  line-height: 1.45;
+}
+
+.aboutSlideHelp {
+  background-color: #ffffff;
+  border: 0.08vw solid #fda1b2;
+  color: #f995aa;
+}
+
+.aboutSlideHelp p {
+  color: #000000;
+}
+
+.aboutSlideAlone {
+  background: linear-gradient(135deg, #f78fa7, #f8c5d0);
+  color: #ffffff;
+}
+
+.aboutSlideReviews {
+  background-color: #9fc3f8;
+  color: #ffffff;
+}
+
+.aboutSlideCollab {
+  background-color: #ffc853;
+  color: #ffffff;
+}
+
+#slideHelp:checked ~ .aboutSlideHelp,
+#slideAlone:checked ~ .aboutSlideHelp,
+#slideReviews:checked ~ .aboutSlideHelp,
+#slideCollab:checked ~ .aboutSlideHelp {
+  transform: translateX(0);
+}
+
+#slideHelp:checked ~ .aboutSlideAlone {
+  transform: translateX(calc(100vw - 16.8vw));
+}
+
+#slideHelp:checked ~ .aboutSlideReviews {
+  transform: translateX(calc(100vw - 11.2vw));
+}
+
+#slideHelp:checked ~ .aboutSlideCollab {
+  transform: translateX(calc(100vw - 5.6vw));
+}
+
+#slideAlone:checked ~ .aboutSlideAlone {
+  transform: translateX(5.6vw);
+}
+
+#slideAlone:checked ~ .aboutSlideReviews {
+  transform: translateX(calc(100vw - 11.2vw));
+}
+
+#slideAlone:checked ~ .aboutSlideCollab {
+  transform: translateX(calc(100vw - 5.6vw));
+}
+
+#slideReviews:checked ~ .aboutSlideAlone {
+  transform: translateX(5.6vw);
+}
+
+#slideReviews:checked ~ .aboutSlideReviews {
+  transform: translateX(11.2vw);
+}
+
+#slideReviews:checked ~ .aboutSlideCollab {
+  transform: translateX(calc(100vw - 5.6vw));
+}
+
+#slideCollab:checked ~ .aboutSlideAlone {
+  transform: translateX(5.6vw);
+}
+
+#slideCollab:checked ~ .aboutSlideReviews {
+  transform: translateX(11.2vw);
+}
+
+#slideCollab:checked ~ .aboutSlideCollab {
+  transform: translateX(16.8vw);
+}
+
+#slideHelp:checked ~ .aboutSlideHelp .aboutSlideContent,
+#slideAlone:checked ~ .aboutSlideAlone .aboutSlideContent,
+#slideReviews:checked ~ .aboutSlideReviews .aboutSlideContent,
+#slideCollab:checked ~ .aboutSlideCollab .aboutSlideContent {
+  opacity: 1;
+}

@@ -98,6 +98,36 @@ window.addEventListener("load", () => {
         }
       });
     });
+
+    const aboutAccordion = document.querySelector(".aboutAccordion");
+
+    if (aboutAccordion) {
+      const slides = Array.from(aboutAccordion.querySelectorAll(".aboutSlide"));
+      const tab = 5.6;
+
+      function setActiveSlide(activeIndex) {
+        slides.forEach((slide, index) => {
+          slide.classList.toggle("active", index === activeIndex);
+
+          if (index <= activeIndex) {
+            slide.style.transform = `translateX(${index * tab}vw)`;
+          } else {
+            const rightTabs = slides.length - index;
+            slide.style.transform = `translateX(calc(100vw - ${rightTabs * tab}vw))`;
+          }
+        });
+      }
+
+      slides.forEach((slide, index) => {
+        const tabButton = slide.querySelector(".aboutSlideTab");
+
+        tabButton.addEventListener("click", () => {
+          setActiveSlide(index);
+        });
+      });
+
+      setActiveSlide(0);
+    }
   });
 
   window.addEventListener("resize", resizeCanvas);
@@ -206,3 +236,5 @@ lifeWhiteButton.addEventListener("mouseleave", () => {
     }, 450);
   }
 });
+
+// СТРАНИЦА О НАС
