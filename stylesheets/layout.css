@@ -73,6 +73,21 @@ body {
   color: #ffc4c9;
 }
 
+.aboutSecondStroke {
+  margin: 0 0 0 0vw;
+}
+
+.aboutNavActive {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  border-radius: 1.3vw;
+  color: #000000;
+}
+
+.aboutSpecialistsNav {
+  margin-left: 0;
+}
+
 .main_menu {
   display: flex;
   justify-content: center;
@@ -747,6 +762,23 @@ body {
 }
 
 /* СТРАНИЦА О НАС */
+
+.logoNavAbout img {
+  width: 7vw;
+  height: auto;
+  z-index: 100;
+  padding-top: 0.4vw;
+  z-index: 9;
+}
+
+.logoNavContainerAbout {
+  border: 0.1vw solid #ffc4c9;
+  border-radius: 0.8vw;
+  padding: 0vw 2.7vw;
+  display: inline-block;
+  margin: 2vw;
+}
+
 .aboutAccordion {
   --tab: 5.6vw;
   position: relative;
@@ -789,8 +821,66 @@ body {
   z-index: 10;
 }
 
+.aboutHelpRightStars {
+  position: absolute;
+  top: 5.3vw;
+  right: 9vw;
+  width: 18vw;
+  height: calc(40vw - 5.3vw);
+  overflow: visible;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.aboutHelpRightStars .starAnimation {
+  top: -8vw;
+  pointer-events: none;
+}
+
+.aboutHelpRightStars .starAnimation:nth-child(1) {
+  width: 8vw;
+  left: 8%;
+  animation-duration: 5s;
+  animation-delay: -1.2s;
+}
+
+.aboutHelpRightStars .starAnimation:nth-child(2) {
+  width: 11vw;
+  left: 38%;
+  animation-duration: 7s;
+  animation-delay: -4s;
+}
+
+.aboutHelpRightStars .starAnimation:nth-child(3) {
+  width: 7.2vw;
+  left: 62%;
+  animation-duration: 6s;
+  animation-delay: -2.4s;
+}
+
+.aboutHelpRightStars .starAnimation:nth-child(4) {
+  width: 10.3vw;
+  left: 22%;
+  animation-duration: 8s;
+  animation-delay: -6s;
+}
+
+.aboutHelpRightStars .starAnimation:nth-child(5) {
+  width: 8.8vw;
+  left: 52%;
+  animation-duration: 5.8s;
+  animation-delay: -3.2s;
+}
+
+.aboutHelpRightStars .starAnimation:nth-child(6) {
+  width: 12vw;
+  left: 32%;
+  animation-duration: 7.5s;
+  animation-delay: -5.4s;
+}
+
 .aboutSlideContent {
-  padding: 7vw 8vw 5vw 11vw;
+  padding: 10vw 8vw 5vw 11vw;
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -840,8 +930,163 @@ body {
   color: #ffffff;
 }
 
+.aboutSlideReviews .aboutSlideContent {
+  padding: 7.4vw 5vw 4vw 8.8vw;
+}
+
+.aboutSlideReviews .aboutSlideContent h1 {
+  margin-bottom: 3.3vw;
+  font-size: 2.25vw;
+  color: #ffffff;
+}
+
+.aboutSlideReviews .aboutSlideLead {
+  max-width: 36vw;
+  color: #ffffff;
+  font-size: 1.6vw;
+  line-height: 1.08;
+}
+
+.reviewsMarquee {
+  width: calc(100vw - 27vw);
+  margin-top: 3vw;
+  overflow: hidden;
+}
+
+.reviewsTrack {
+  display: flex;
+  width: max-content;
+  gap: 4vw;
+  animation: reviewsMarqueeMove 24s linear infinite;
+}
+
+.reviewCard {
+  width: 28vw;
+  min-height: 10vw;
+  padding: 1.35vw 1.65vw 1.6vw;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  border-radius: 0.8vw;
+  color: #000000;
+}
+
+.reviewCardTop {
+  display: flex;
+  align-items: center;
+  gap: 1.8vw;
+}
+
+.reviewCardTop img {
+  width: 5.8vw;
+  height: 5.8vw;
+  flex: 0 0 5.8vw;
+  object-fit: cover;
+}
+
+.reviewCard h2 {
+  margin-bottom: 1.1vw;
+  font-family: "TTNormsProM";
+  font-size: 1.75vw;
+  line-height: 1;
+  color: #000000;
+}
+
+.reviewTags {
+  display: flex;
+  gap: 0.55vw;
+}
+
+.reviewTag {
+  min-width: 5.7vw;
+  padding: 0.38vw 1.05vw;
+  border-radius: 1vw;
+  font-family: "TTNormsProN";
+  font-size: 0.95vw;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+}
+
+.reviewTagBlue {
+  background-color: #9aacff;
+}
+
+.reviewTagOrange {
+  background-color: #ffa45c;
+}
+
+.reviewTagPink {
+  background-color: #dba9ca;
+}
+
+.reviewTagCyan {
+  background-color: #72d9ec;
+}
+
+.reviewTagCyanDark {
+  background-color: #91d4e7;
+}
+
+.reviewTagYellow {
+  background-color: #ffd176;
+}
+
+.reviewTagPaleBlue {
+  background-color: #b9d4ff;
+}
+
+.reviewCard p {
+  margin-top: 2.2vw;
+  font-family: "TTNormsProN";
+  font-size: 1.25vw;
+  line-height: 1.12;
+  color: #000000;
+}
+
+@keyframes reviewsMarqueeMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50% - 2vw));
+  }
+}
+
 .aboutSlideCollab {
   background-color: #ffc853;
+  color: #ffffff;
+}
+
+.aboutSlideCollab .aboutSlideContent {
+  padding: 10.5vw 8vw 5vw 12vw;
+}
+
+.aboutSlideCollab .aboutSlideContent h1 {
+  margin-bottom: 3.8vw;
+  font-size: 2.35vw;
+  line-height: 1.16;
+  color: #ffffff;
+}
+
+.aboutCollabText {
+  display: grid;
+  grid-template-columns: 18vw 35vw;
+  column-gap: 3.5vw;
+  color: #ffffff;
+}
+
+.aboutCollabText h2 {
+  font-family: "TTNormsProN";
+  font-size: 1.85vw;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.aboutCollabText p {
+  max-width: 43vw;
+  font-size: 1.2vw;
+  line-height: 1.45;
   color: #ffffff;
 }
 
