@@ -30,16 +30,18 @@ body {
   width: 7vw;
   height: auto;
   z-index: 100;
-  padding-top: 0.4vw;
   z-index: 9;
 }
 
 .logoNavContainer {
+  height: 2.9vw;
   background-color: #ffffff;
   border-radius: 1.3vw;
   padding: 0vw 2.7vw;
-  display: inline-block;
-  margin: 2vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1vw;
 }
 .strokeNav {
   width: 6vw;
@@ -50,10 +52,13 @@ body {
 }
 
 .aboutNavContainer {
+  height: 2.9vw;
   border: 0.1vw solid #ffc4c9;
   border-radius: 0.8vw;
-  padding: 0.7vw 2.3vw;
-  display: inline-block;
+  padding: 0 2.3vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 2vw;
   font-family: "TTNormsProM";
   font-size: 1.2vw;
@@ -62,10 +67,13 @@ body {
 }
 
 .otherNavContainer {
+  height: 2.9vw;
   border: 0.1vw solid #ffc4c9;
   border-radius: 0.8vw;
-  padding: 0.7vw 2.3vw;
-  display: inline-block;
+  padding: 0 2.3vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 1vw;
   font-family: "TTNormsProM";
   font-size: 1.2vw;
@@ -767,25 +775,39 @@ body {
   width: 7vw;
   height: auto;
   z-index: 100;
-  padding-top: 0.4vw;
   z-index: 9;
 }
 
 .logoNavContainerAbout {
+  height: 2.9vw;
   border: 0.1vw solid #ffc4c9;
   border-radius: 0.8vw;
   padding: 0vw 2.7vw;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin: 2vw;
 }
 
 .aboutAccordion {
   --tab: 5.6vw;
   position: relative;
+  z-index: 2;
   width: 100%;
   height: 40vw;
   overflow: hidden;
   background-color: #ffffff;
+}
+
+.aboutAccordion::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3.2vw;
+  background: linear-gradient(90deg, #9fc3f8 0%, #f77bd3 100%);
+  z-index: 0;
 }
 
 .aboutAccordion input {
@@ -801,6 +823,7 @@ body {
   border-radius: 2.5vw;
   overflow: hidden;
   transition: transform 0.7s ease;
+  z-index: 1;
 }
 
 .aboutSlideTab {
@@ -948,7 +971,6 @@ body {
 }
 
 .reviewsMarquee {
-  width: calc(100vw - 27vw);
   margin-top: 3vw;
   overflow: hidden;
 }
@@ -977,9 +999,7 @@ body {
 }
 
 .reviewCardTop img {
-  width: 5.8vw;
   height: 5.8vw;
-  flex: 0 0 5.8vw;
   object-fit: cover;
 }
 
@@ -1150,4 +1170,525 @@ body {
 #slideReviews:checked ~ .aboutSlideReviews .aboutSlideContent,
 #slideCollab:checked ~ .aboutSlideCollab .aboutSlideContent {
   opacity: 1;
+}
+
+/* СПЕЦИАЛИСТЫ */
+
+.specialistsAboutNav {
+  margin-left: 0;
+}
+
+.specialistsCenterStroke {
+  margin: 0 0 0 0;
+}
+
+.specialistsNavActive {
+  min-width: 10vw;
+  margin-left: 0;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  border-radius: 1.3vw;
+  color: #000000;
+  text-align: center;
+}
+
+.specialistsRightStroke {
+  margin: 0 0 0 0;
+}
+
+.specialistsSubscribeNav {
+  margin-left: 0;
+}
+
+.specialistsPage {
+  padding-top: 5.3vw;
+}
+
+.specialistsHero {
+  position: relative;
+  width: 100%;
+  height: 22.8vw;
+  overflow: hidden;
+  background-image: url("../images/specialistsBanner.svg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 2.5vw 2.5vw;
+}
+
+.specialistsHeroText {
+  position: absolute;
+  left: 4.7vw;
+  top: 7.1vw;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.specialistsHeroText h1 {
+  margin-bottom: 1.2vw;
+  font-family: "TTNormsProM";
+  font-size: 3vw;
+  line-height: 1.08;
+}
+
+.specialistsHeroText p {
+  font-family: "TTNormsProN";
+  font-size: 1.3vw;
+  line-height: 1;
+}
+
+.specialistsAvatarMarquee {
+  position: absolute;
+  top: -3vw;
+  right: 6vw;
+  width: 43vw;
+  height: 30vw;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.specialistsAvatarTrack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  animation: specialistsAvatarMove 20s linear infinite;
+}
+
+.specialistsAvatarTrack img {
+  width: 100%;
+  height: auto;
+  display: block;
+  flex: 0 0 auto;
+}
+
+@keyframes specialistsAvatarMove {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.specialistsStats {
+  width: 100%;
+  min-height: 7.9vw;
+  margin-top: -3.2vw;
+  padding: 5vw 8.2vw 1.9vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4vw;
+  align-items: center;
+  background-color: #6b86e7;
+  border-radius: 0 0 2.5vw 2.5vw;
+  color: #ffffff;
+}
+
+.specialistsStat {
+  display: flex;
+  align-items: center;
+  gap: 1.25vw;
+}
+
+.specialistsStat img {
+  width: 3.3vw;
+  height: 3.3vw;
+  object-fit: contain;
+}
+
+.specialistsStat h2 {
+  margin-bottom: 0.25vw;
+  font-family: "TTNormsProM";
+  font-size: 1.35vw;
+  line-height: 1;
+}
+
+.specialistsStat p {
+  font-family: "TTNormsProN";
+  font-size: 0.9vw;
+  line-height: 1.1;
+}
+
+.topCategories {
+  width: 100%;
+  padding: 5.1vw 10vw 4.6vw;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.topCategories h2 {
+  margin-bottom: 3.1vw;
+  font-family: "TTNormsProM";
+  font-size: 3vw;
+  line-height: 1;
+  text-align: center;
+}
+
+.topCategoriesList {
+  max-width: 73vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.55vw 1.8vw;
+}
+
+.categoryTag {
+  min-width: 7.8vw;
+  padding: 0.75vw 2.2vw 0.85vw;
+  border-radius: 1.7vw;
+  font-family: "TTNormsProN";
+  font-size: 1.6vw;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+.categoryTag:hover {
+  transform: scale(1.18);
+}
+
+.categoryTagBlue {
+  background-color: #a9c9f6;
+}
+
+.categoryTagPink {
+  background-color: #f5c2cf;
+}
+
+.categoryTagPeriwinkle {
+  background-color: #aebef8;
+}
+
+.categoryTagMint {
+  background-color: #8edbc8;
+}
+
+.categoryTagOrange {
+  background-color: #ffc18e;
+}
+
+.categoryTagMagenta {
+  background-color: #f5a5ee;
+}
+
+.categoryTagCyan {
+  background-color: #9fe6f0;
+}
+
+.categoryTagPurple {
+  background-color: #d59df2;
+}
+
+.categoryTagSky {
+  background-color: #84cfe6;
+}
+
+.categoryTagYellow {
+  background-color: #ffd36f;
+}
+
+.categoryTagViolet {
+  background-color: #a98cf0;
+}
+
+.categoryTagGreen {
+  background-color: #74cf79;
+}
+
+.categoryTagAqua {
+  background-color: #72d8dd;
+}
+
+.categoryTagRose {
+  background-color: #dda8c6;
+}
+
+.categoryTagSea {
+  background-color: #91d5d2;
+}
+
+.categoryTagSand {
+  background-color: #e5d39b;
+}
+
+.categoryTagAzure {
+  background-color: #77bdf5;
+}
+
+.specialistsDirectory {
+  width: 100%;
+  padding: 1.6vw 4.8vw 6.2vw;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.specialistsDirectory h2 {
+  margin-bottom: 2.2vw;
+  font-family: "TTNormsProM";
+  font-size: 2.2vw;
+  line-height: 1;
+}
+
+.specialistsCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.4vw;
+}
+
+.specialistCard,
+.specialistPromo {
+  position: relative;
+  min-height: 20.5vw;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 0.1vw solid #f7b7c6;
+  border-radius: 0.6vw;
+}
+
+.specialistCard {
+  padding: 1.9vw 1.75vw 5vw;
+}
+
+.specialistRating {
+  position: absolute;
+  top: 1.55vw;
+  right: 1.25vw;
+  min-width: 4.6vw;
+  padding: 0.42vw 0.8vw;
+  border-radius: 0.55vw;
+  background-color: #f58ba4;
+  font-family: "TTNormsProM";
+  font-size: 0.95vw;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+}
+
+.specialistCardTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.3vw;
+}
+
+.specialistCardTop img {
+  width: 5.9vw;
+  height: 5.9vw;
+  flex: 0 0 5.9vw;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.specialistCard h3 {
+  margin-top: 0.25vw;
+  margin-bottom: 0.55vw;
+  font-family: "TTNormsProM";
+  font-size: 1.65vw;
+  line-height: 1.7vw;
+}
+
+.specialistCardTop p,
+.specialistMeta,
+.specialistMeta span {
+  font-family: "TTNormsProN";
+  font-size: 0.95vw;
+  line-height: 1.18;
+  color: #8a8a8a;
+}
+
+.specialistMeta {
+  margin-top: 0.35vw;
+  margin-left: 7.2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.42vw;
+}
+
+.specialistMeta span:first-child::before {
+  content: "";
+  width: 0.78vw;
+  height: 0.78vw;
+  margin-right: 0.32vw;
+  display: inline-block;
+  vertical-align: -0.08vw;
+  background-color: #7f7f7f;
+  border-radius: 50%;
+}
+
+.specialistTags {
+  position: absolute;
+  left: 1.75vw;
+  right: 1.75vw;
+  bottom: 4.6vw;
+  display: flex;
+  gap: 0.65vw;
+}
+
+.specialistTag {
+  min-width: 6.9vw;
+  padding: 0.55vw 1.05vw;
+  border-radius: 1.35vw;
+  font-family: "TTNormsProN";
+  font-size: 1.05vw;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+}
+
+.specialistButton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2.75vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f58ba4;
+  font-family: "TTNormsProN";
+  font-size: 1.35vw;
+  line-height: 1;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.specialistTagBlue {
+  background-color: #9aacff;
+}
+
+.specialistTagCyan {
+  background-color: #72d9ec;
+}
+
+.specialistTagGreen {
+  background-color: #74cf79;
+}
+
+.specialistTagSky {
+  background-color: #91d4e7;
+}
+
+.specialistTagMint {
+  background-color: #66d8b8;
+}
+
+.specialistTagMagenta {
+  background-color: #f2a2ec;
+}
+
+.specialistTagPale {
+  background-color: #b9d4ff;
+}
+
+.specialistTagViolet {
+  background-color: #a98cf0;
+}
+
+.specialistTagSand {
+  background-color: #e5d39b;
+}
+
+.specialistTagRose {
+  background-color: #dda8c6;
+}
+
+.specialistPromo {
+  min-height: 20.5vw;
+  padding: 2vw 2.5vw;
+  grid-column: span 2;
+}
+
+.specialistPromo p:first-child {
+  margin-bottom: 2.9vw;
+  font-family: "TTNormsProN";
+  font-size: 0.95vw;
+  color: #9a9a9a;
+}
+
+.specialistPromo h3 {
+  margin-bottom: 2vw;
+  font-family: "TTNormsProM";
+  font-size: 3vw;
+  line-height: 1;
+  color: #6b86e7;
+}
+
+.specialistPromo p:last-of-type {
+  font-family: "TTNormsProN";
+  font-size: 1.05vw;
+  line-height: 1.35;
+  color: #000000;
+}
+
+.specialistPromo img {
+  position: absolute;
+  width: 14.2vw;
+  height: auto;
+  pointer-events: none;
+}
+
+.specialistPromoStarOne {
+  right: -0.8vw;
+  top: -0.6vw;
+}
+
+.specialistPromoStarTwo {
+  right: 1.5vw;
+  top: 4.2vw;
+}
+
+.specialistPromoStarThree {
+  right: 6.6vw;
+  bottom: -1.8vw;
+}
+
+.promoMarquee {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 5.2vw;
+  margin-top: -2.6vw;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(90deg, #9fc3f8 0%, #f77bd3 100%);
+  border-radius: 0 0 2vw 2vw;
+  font-family: "TTNormsProN";
+  color: #ffffff;
+}
+
+.specialistsPromoMarquee {
+  margin-top: 0;
+}
+
+.aboutPromoMarquee {
+  height: 7.6vw;
+  margin-top: -2.2vw;
+  align-items: flex-end;
+  padding-bottom: 1.4vw;
+}
+
+.promoMarqueeTrack {
+  display: flex;
+  width: max-content;
+  gap: 3vw;
+  white-space: nowrap;
+  animation: promoMarqueeMove 18s linear infinite;
+}
+
+.promoMarqueeTrack span {
+  font-size: 2.4vw;
+  line-height: 1;
+}
+
+@keyframes promoMarqueeMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }

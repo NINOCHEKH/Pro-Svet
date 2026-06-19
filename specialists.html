@@ -8,13 +8,333 @@
     <script defer src="javascripts/scripts.js"></script>
   </head>
   <body>
-    <nav class="main_menu">
-      <a href="index.html">Главная страницы</a>
-      <a href="about.html">О нас</a>
-      <a href="specialists.html" class="active">Специалисты</a>
-      <a href="subscribe.html">Подписки</a>
-      <a href="merch.html">Мерч</a>
-    </nav>
-    <h2>Спецалисты</h2>
+    <section class="navMenu">
+      <nav class="main_menu">
+        <a href="index.html" class="logoNavAbout">
+          <div class="logoNavContainerAbout">
+            <img src="images/logoNavDeactivate.svg" alt="Логотип" />
+          </div>
+        </a>
+
+        <div class="about">
+          <div class="otherNavContainer specialistsAboutNav">
+            <a href="about.html">О нас</a>
+          </div>
+        </div>
+
+        <div class="strokeNav specialistsCenterStroke"></div>
+
+        <div class="about">
+          <div class="otherNavContainer specialistsNavActive">
+            <a href="specialists.html">Специалисты</a>
+          </div>
+        </div>
+
+        <div class="strokeNav specialistsRightStroke"></div>
+
+        <div class="about">
+          <div class="otherNavContainer specialistsSubscribeNav">
+            <a href="subscribe.html">Подписка</a>
+          </div>
+        </div>
+
+        <div class="about">
+          <div class="otherNavContainer">
+            <a href="merch.html">Мерч</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <main class="specialistsPage">
+      <section class="specialistsHero">
+        <div class="specialistsHeroText">
+          <h1>
+            Большой выбор<br />
+            специалистов!
+          </h1>
+          <p>Самые лучшие по всей России!</p>
+        </div>
+
+        <div class="specialistsAvatarMarquee" aria-hidden="true">
+          <div class="specialistsAvatarTrack">
+            <img src="images/paople.png" alt="" />
+            <img src="images/paople.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="specialistsStats" aria-label="Преимущества">
+        <div class="specialistsStat">
+          <img src="images/Icon1.svg" alt="" />
+          <div>
+            <h2>800+</h2>
+            <p>психологов на сайте</p>
+          </div>
+        </div>
+
+        <div class="specialistsStat">
+          <img src="images/Icon2.svg" alt="" />
+          <div>
+            <h2>Одна подписка</h2>
+            <p>На весь функционал</p>
+          </div>
+        </div>
+
+        <div class="specialistsStat">
+          <img src="images/Icon3.svg" alt="" />
+          <div>
+            <h2>Задания</h2>
+            <p>Для анализа состояния</p>
+          </div>
+        </div>
+
+        <div class="specialistsStat">
+          <img src="images/Icon4.svg" alt="" />
+          <div>
+            <h2>Удобная связь</h2>
+            <p>Со всеми специалистами</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="topCategories" aria-labelledby="topCategoriesTitle">
+        <h2 id="topCategoriesTitle">Топ категорий</h2>
+
+        <div class="topCategoriesList">
+          <span class="categoryTag categoryTagBlue">Фобии</span>
+          <span class="categoryTag categoryTagPink">ПРЛ</span>
+          <span class="categoryTag categoryTagPeriwinkle">Депрессия</span>
+          <span class="categoryTag categoryTagMint">БАР</span>
+          <span class="categoryTag categoryTagOrange">ОКР</span>
+          <span class="categoryTag categoryTagMagenta">Алекситимия</span>
+          <span class="categoryTag categoryTagCyan">ПТСР</span>
+          <span class="categoryTag categoryTagPurple">Нарциссизм</span>
+          <span class="categoryTag categoryTagSky">СДВГ</span>
+          <span class="categoryTag categoryTagYellow">Тревожность</span>
+          <span class="categoryTag categoryTagViolet">Кризис</span>
+          <span class="categoryTag categoryTagGreen">Травля</span>
+          <span class="categoryTag categoryTagAqua">Опустошённость</span>
+          <span class="categoryTag categoryTagRose">Агрессия</span>
+          <span class="categoryTag categoryTagSea">Психологические травмы</span>
+          <span class="categoryTag categoryTagSand">Социофобия</span>
+          <span class="categoryTag categoryTagAzure">Булимия</span>
+        </div>
+      </section>
+
+      <section class="specialistsDirectory" aria-labelledby="specialistsTitle">
+        <h2 id="specialistsTitle">Психологи и коучи</h2>
+
+        <div class="specialistsCards">
+          <article class="specialistCard">
+            <span class="specialistRating">★ 4.98</span>
+            <div class="specialistCardTop">
+              <img src="images/AlexeyPetrov.svg" alt="" />
+              <div>
+                <h3>Алекс<br />Петров</h3>
+                <p>Семейный психолог</p>
+              </div>
+            </div>
+            <div class="specialistMeta">
+              <span>Москва, Россия</span>
+              <span>11 лет стажа</span>
+              <span>100+ отзывов</span>
+            </div>
+            <div class="specialistTags">
+              <span class="specialistTag specialistTagBlue">Депрессия</span>
+              <span class="specialistTag specialistTagCyan">ПТСР</span>
+            </div>
+            <a href="#" class="specialistButton">Подробнее</a>
+          </article>
+
+          <article class="specialistCard">
+            <span class="specialistRating">★ 5.0</span>
+            <div class="specialistCardTop">
+              <img src="images/MarinaBoblova.svg" alt="" />
+              <div>
+                <h3>Рита<br />Боброва</h3>
+                <p>Семейный психолог</p>
+              </div>
+            </div>
+            <div class="specialistMeta">
+              <span>Москва, Россия</span>
+              <span>8 лет стажа</span>
+              <span>100+ отзывов</span>
+            </div>
+            <div class="specialistTags">
+              <span class="specialistTag specialistTagGreen">Травля</span>
+              <span class="specialistTag specialistTagSky">СДВГ</span>
+            </div>
+            <a href="#" class="specialistButton">Подробнее</a>
+          </article>
+
+          <article class="specialistCard">
+            <span class="specialistRating">★ 4.96</span>
+            <div class="specialistCardTop">
+              <img src="images/ArtyomDiaz.svg" alt="" />
+              <div>
+                <h3>Артём<br />Диас</h3>
+                <p>Психолог</p>
+              </div>
+            </div>
+            <div class="specialistMeta">
+              <span>Москва, Россия</span>
+              <span>15 лет стажа</span>
+              <span>100+ отзывов</span>
+            </div>
+            <div class="specialistTags">
+              <span class="specialistTag specialistTagMint">Абьюз</span>
+              <span class="specialistTag specialistTagBlue">Депрессия</span>
+            </div>
+            <a href="#" class="specialistButton">Подробнее</a>
+          </article>
+
+          <article class="specialistCard">
+            <span class="specialistRating">★ 4.98</span>
+            <div class="specialistCardTop">
+              <img src="images/SergeyBelyaev.svg" alt="" />
+              <div>
+                <h3>Макс<br />Беляев</h3>
+                <p>Психолог</p>
+              </div>
+            </div>
+            <div class="specialistMeta">
+              <span>Липецк, Россия</span>
+              <span>9 лет стажа</span>
+              <span>100+ отзывов</span>
+            </div>
+            <div class="specialistTags">
+              <span class="specialistTag specialistTagMagenta"
+                >Алекситимия</span
+              >
+              <span class="specialistTag specialistTagPale">Фобии</span>
+            </div>
+            <a href="#" class="specialistButton">Подробнее</a>
+          </article>
+
+          <article class="specialistPromo">
+            <p>Промокод</p>
+            <h3>Первый шаг — <br />самый бережный</h3>
+            <p>
+              Выбери своего специалиста сейчас<br />
+              и получи промокод на первый месяц 100%!
+            </p>
+            <img
+              class="specialistPromoStarOne"
+              src="images/starTheFirstStep.svg"
+              alt=""
+            />
+          </article>
+
+          <article class="specialistCard">
+            <span class="specialistRating">★ 5.0</span>
+            <div class="specialistCardTop">
+              <img src="images/SofiaPopova.svg" alt="" />
+              <div>
+                <h3>Софья<br />Попова</h3>
+                <p>Психолог</p>
+              </div>
+            </div>
+            <div class="specialistMeta">
+              <span>Сочи, Россия</span>
+              <span>5 лет стажа</span>
+              <span>45 отзывов</span>
+            </div>
+            <div class="specialistTags">
+              <span class="specialistTag specialistTagViolet">Кризис</span>
+              <span class="specialistTag specialistTagSand">Социофобия</span>
+            </div>
+            <a href="#" class="specialistButton">Подробнее</a>
+          </article>
+
+          <article class="specialistCard">
+            <span class="specialistRating">★ 4.98</span>
+            <div class="specialistCardTop">
+              <img src="images/MayLeeChen.svg" alt="" />
+              <div>
+                <h3>
+                  Мэй <br />
+                  Ли Чэнь
+                </h3>
+                <p>Коуч</p>
+              </div>
+            </div>
+            <div class="specialistMeta">
+              <span>Москва, Россия</span>
+              <span>7 лет стажа</span>
+              <span>83 отзыва</span>
+            </div>
+            <div class="specialistTags">
+              <span class="specialistTag specialistTagViolet">Кризис</span>
+              <span class="specialistTag specialistTagRose">Агрессия</span>
+            </div>
+            <a href="#" class="specialistButton">Подробнее</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <section class="promoMarquee specialistsPromoMarquee" aria-label="Акция">
+      <div class="promoMarqueeTrack">
+        <span>при регистрации первый месяц бесплатно!</span>
+        <span>С 16 апреля по 16 мая при регистрации первый месяц бесплатно!</span>
+        <span>при регистрации первый месяц бесплатно!</span>
+        <span>С 16 апреля по 16 мая при регистрации первый месяц бесплатно!</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footerTop">
+        <div class="footerColumn">
+          <h3>О нас</h3>
+          <a href="#">Наша помощь</a>
+          <a href="#">Ты не одинок</a>
+          <a href="#">Отзывы</a>
+          <a href="#">Колаборации</a>
+        </div>
+
+        <div class="footerColumn">
+          <h3>Специалисты</h3>
+          <a href="#">Категории</a>
+          <a href="#">Специалисты</a>
+        </div>
+
+        <div class="footerColumn">
+          <h3>Подписка</h3>
+          <a href="#">Лицензия</a>
+          <a href="#">Продлить подписку</a>
+        </div>
+
+        <div class="footerColumn">
+          <h3>Мерч</h3>
+          <a href="#">Посуда</a>
+          <a href="#">Музыка</a>
+          <a href="#">Одежда</a>
+        </div>
+
+        <div class="footerContacts">
+          <img src="images/logoNav.svg" alt="ProSvet" />
+
+          <h3>Техподдержка</h3>
+
+          <h3>Телефон доверия</h3>
+          <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+        </div>
+      </div>
+
+      <div class="footerBottom">
+        <img src="images/logoNav.svg" alt="ProSvet" />
+
+        <p>
+          © ProSvet Все права сохранены. Все торговые марки являются
+          собственностью соответствующих владельцев в РФ и других странах. Часть
+          географических сведений на этом сайте предоставлена geonames.org.
+        </p>
+      </div>
+
+      <p class="footerCopyright">
+        © 2026 Сайт с психологической помощью «ProSvet»
+      </p>
+    </footer>
   </body>
 </html>
