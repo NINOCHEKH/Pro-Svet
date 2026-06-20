@@ -8,13 +8,212 @@
     <script defer src="javascripts/scripts.js"></script>
   </head>
   <body>
-    <nav class="main_menu">
-      <a href="index.html">Главная страницы</a>
-      <a href="about.html">О нас</a>
-      <a href="specialists.html">Специалисты</a>
-      <a href="subscribe.html">Подписки</a>
-      <a href="merch.html" class="active">Мерч</a>
-    </nav>
-    <h2>О нас</h2>
+    <section class="navMenu">
+      <nav class="main_menu">
+        <a href="index.html" class="logoNavAbout">
+          <div class="logoNavContainerAbout merchLogoNavContainer">
+            <img src="images/logoNavDeactivate.svg" alt="Логотип" />
+          </div>
+        </a>
+
+        <div class="about">
+          <div class="otherNavContainer merchAboutNav">
+            <a href="about.html">О нас</a>
+          </div>
+        </div>
+
+        <div class="about">
+          <div class="otherNavContainer merchSpecialistsNav">
+            <a href="specialists.html">Специалисты</a>
+          </div>
+        </div>
+
+        <div class="about">
+          <div class="otherNavContainer merchSubscribeNav">
+            <a href="subscribe.html">Подписка</a>
+          </div>
+        </div>
+
+        <div class="strokeNav merchLeftStroke"></div>
+
+        <div class="about">
+          <div class="otherNavContainer merchNavActive">
+            <a href="merch.html">Мерч</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <main class="merchPage">
+      <section class="merchHero">
+        <img src="images/BannerMerch.png" alt="Скидки на кружки ProSvet" />
+      </section>
+
+      <section class="merchCatalog">
+        <div class="merchSection">
+          <h1>Кружки и тарелки</h1>
+
+          <div class="merchGrid">
+            <article class="merchCard">
+              <img
+                class="merchCardImage"
+                src="images/Cap1.png"
+                alt="Кружка Дорогу осилит идущий"
+              />
+              <div class="merchCardInfo">
+                <span class="merchTag">Кружки</span>
+                <h2>«Дорогу осилит идущий»</h2>
+                <p>
+                  Классическая кружка из высококачественной белой керамики.
+                  Идеальный выбор для ежедневного использования в доме или
+                  офисе.
+                </p>
+                <div class="merchPrice">
+                  <strong>699 руб.</strong>
+                  <s>959 руб.</s>
+                  <span>25%</span>
+                </div>
+              </div>
+              <a class="merchButton" href="#">В корзину</a>
+            </article>
+
+            <article class="merchCard">
+              <img
+                class="merchCardImage"
+                src="images/Cap2.png"
+                alt="Кружка Чувствуй"
+              />
+              <div class="merchCardInfo">
+                <span class="merchTag">Кружки</span>
+                <h2>«ЧУВСТВУЙ»</h2>
+                <p>
+                  Гладкая приятная на ощупь кружка насыщенного фиолетового
+                  цвета. На боку — лаконичная надпись «Чувствуй». Напоминание о
+                  важности эмоций, пауз и живого контакта с собой.
+                </p>
+                <div class="merchPrice">
+                  <strong>699 руб.</strong>
+                  <s>959 руб.</s>
+                  <span>25%</span>
+                </div>
+              </div>
+              <a class="merchButton" href="#">В корзину</a>
+            </article>
+          </div>
+        </div>
+
+        <div class="merchSection">
+          <h1>Тетради и заметки</h1>
+
+          <div class="merchGrid">
+            <article class="merchCard">
+              <img
+                class="merchCardImage"
+                src="images/note1.png"
+                alt="Дневник для состояния"
+              />
+              <div class="merchCardInfo">
+                <span class="merchTag">Дневник</span>
+                <h2>Дневник для состояния</h2>
+                <p>
+                  Этот дневник — идеальный способ вести записи о своём
+                  состоянии для себя или специалиста.
+                  <br /><br />
+                  Идеально для поездок, где может не быть интернета.
+                </p>
+                <div class="merchPrice">
+                  <strong>2 299 руб</strong>
+                </div>
+              </div>
+              <a class="merchButton" href="#">В корзину</a>
+            </article>
+
+            <article class="merchCard">
+              <img
+                class="merchCardImage"
+                src="images/note2.png"
+                alt="Ежедневные советы"
+              />
+              <div class="merchCardInfo">
+                <span class="merchTag">Заметки</span>
+                <h2>Ежедневные советы</h2>
+                <p>
+                  Мы понимаем какого это, когда вы ощущаете грусть, но не с кем
+                  поговорить. Клеящиеся заметки с советами могут облегчить
+                  ощущения.
+                </p>
+                <div class="merchPrice">
+                  <strong>5 999 руб</strong>
+                </div>
+              </div>
+              <a class="merchButton" href="#">В корзину</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="promoMarquee merchPromoMarquee" aria-label="Акция">
+      <div class="promoMarqueeTrack">
+        <span>при регистрации первый месяц бесплатно!</span>
+        <span>С 16 апреля по 16 мая при регистрации первый месяц бесплатно!</span>
+        <span>при регистрации первый месяц бесплатно!</span>
+        <span>С 16 апреля по 16 мая при регистрации первый месяц бесплатно!</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footerTop">
+        <div class="footerColumn">
+          <h3>О нас</h3>
+          <a href="#">Наша помощь</a>
+          <a href="#">Ты не одинок</a>
+          <a href="#">Отзывы</a>
+          <a href="#">Колаборации</a>
+        </div>
+
+        <div class="footerColumn">
+          <h3>Специалисты</h3>
+          <a href="#">Категории</a>
+          <a href="#">Специалисты</a>
+        </div>
+
+        <div class="footerColumn">
+          <h3>Подписка</h3>
+          <a href="#">Лицензия</a>
+          <a href="#">Продлить подписку</a>
+        </div>
+
+        <div class="footerColumn">
+          <h3>Мерч</h3>
+          <a href="#">Посуда</a>
+          <a href="#">Музыка</a>
+          <a href="#">Одежда</a>
+        </div>
+
+        <div class="footerContacts">
+          <img src="images/logoNav.svg" alt="ProSvet" />
+
+          <h3>Техподдержка</h3>
+
+          <h3>Телефон доверия</h3>
+          <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+        </div>
+      </div>
+
+      <div class="footerBottom">
+        <img src="images/logoNav.svg" alt="ProSvet" />
+
+        <p>
+          © ProSvet Все права сохранены. Все торговые марки являются
+          собственностью соответствующих владельцев в РФ и других странах. Часть
+          географических сведений на этом сайте предоставлена geonames.org.
+        </p>
+      </div>
+
+      <p class="footerCopyright">
+        © 2026 Сайт с психологической помощью «ProSvet»
+      </p>
+    </footer>
   </body>
 </html>

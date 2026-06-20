@@ -1174,6 +1174,10 @@ body {
 
 /* СПЕЦИАЛИСТЫ */
 
+.specialistsLogoNavContainer {
+  margin: 1vw;
+}
+
 .specialistsAboutNav {
   margin-left: 0;
 }
@@ -1198,6 +1202,488 @@ body {
 
 .specialistsSubscribeNav {
   margin-left: 0;
+}
+
+/* ПОДПИСКА */
+
+.subscribeLogoNavContainer {
+  margin: 1vw;
+}
+
+.subscribeAboutNav {
+  margin-left: 0;
+}
+
+.subscribeSpecialistsNav {
+  margin-left: 0.6vw;
+}
+
+.subscribeLeftStroke,
+.subscribeRightStroke {
+  margin: 0;
+}
+
+.subscribeNavActive {
+  min-width: 10vw;
+  margin-left: 0;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  border-radius: 1.3vw;
+  color: #000000;
+  text-align: center;
+}
+
+.subscribeMerchNav {
+  margin-left: 0;
+}
+
+.subscribePage {
+  padding-top: 5.3vw;
+}
+
+.subscribeHero {
+  display: grid;
+  grid-template-columns: 63% 37%;
+  width: 100%;
+  height: 48vw;
+  overflow: hidden;
+  border-radius: 0 0 3vw 3vw;
+  background-color: #ffffff;
+}
+
+.subscribeInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4.2vw;
+  padding: 1.2vw 7vw 4vw;
+}
+
+.subscribeIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.subscribeIntro img {
+  width: 22.8vw;
+  height: auto;
+  margin-bottom: 2.6vw;
+}
+
+.subscribeIntro p {
+  font-family: "TTNormsProN";
+  font-size: 1.45vw;
+  line-height: 1.28;
+  color: #000000;
+}
+
+.subscribeIntro span,
+.subscribePlan span {
+  color: #6b62d8;
+}
+
+.subscribePlans {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4.4vw;
+}
+
+.subscribePlan {
+  position: relative;
+  min-height: 17.2vw;
+  border-radius: 2vw;
+  padding: 1.8vw 2vw 5.2vw;
+  overflow: hidden;
+  font-family: "TTNormsProN";
+}
+
+.subscribePlanLight {
+  border: 0.08vw solid #f89cae;
+  background-color: rgba(255, 255, 255, 0.62);
+}
+
+.subscribePlanPink {
+  background-color: #f8b3c5;
+}
+
+.subscribePlan h2 {
+  margin-bottom: 0.7vw;
+  text-align: center;
+  font-family: "TTNormsProN";
+  font-size: 2.2vw;
+  line-height: 1;
+  color: #000000;
+}
+
+.subscribePlan strong {
+  display: block;
+  margin-bottom: 1.8vw;
+  text-align: center;
+  font-family: "TTNormsProN";
+  font-size: 2.45vw;
+  font-weight: 400;
+  line-height: 1;
+  color: #7d7d7d;
+}
+
+.subscribePlan p {
+  margin-bottom: 0.7vw;
+  text-align: center;
+  font-family: "TTNormsProN";
+  font-size: 1.35vw;
+  line-height: 1;
+  color: #5f5f5f;
+}
+
+.subscribePlan s {
+  text-decoration-thickness: 0.1vw;
+}
+
+.subscribePlan ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7vw;
+  list-style: none;
+}
+
+.subscribePlan li {
+  position: relative;
+  padding-left: 2.2vw;
+  font-size: 1.25vw;
+  line-height: 1.1;
+  color: #000000;
+}
+
+.subscribePlan li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: -0.12vw;
+  width: 1.35vw;
+  height: 1.35vw;
+  border-radius: 0.35vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1vw solid #f89cae;
+  background-color: #ffe3e9;
+  color: #f48aa1;
+  font-size: 1vw;
+  line-height: 1;
+}
+
+.subscribePlanPink li::before {
+  border-color: #6b62d8;
+  background-color: #f4b5c7;
+  color: #6b62d8;
+}
+
+.subscribePlanButton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TTNormsProN";
+  font-size: 1.65vw;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  transition: filter 0.25s ease;
+}
+
+.subscribePlanButton:hover {
+  filter: brightness(1.04);
+}
+
+.subscribePlanButtonPink {
+  background-color: #f891a8;
+}
+
+.subscribePlanButtonViolet {
+  background-color: #5c46cf;
+}
+
+.subscribeStories {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fda1b2;
+}
+
+.subscribeStoryProgress {
+  position: absolute;
+  top: 1.4vw;
+  left: 2vw;
+  right: 2vw;
+  z-index: 5;
+  display: flex;
+  gap: 0.55vw;
+}
+
+.subscribeStoryProgress span {
+  height: 0.28vw;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 10vw;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.subscribeStoryProgress i {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background-color: #ffffff;
+  animation: subscribeStoryProgress 12s linear infinite;
+}
+
+.subscribeStoryProgress span:nth-child(2) i {
+  animation-delay: 4s;
+}
+
+.subscribeStoryProgress span:nth-child(3) i {
+  animation-delay: 8s;
+}
+
+.subscribeStoryImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: subscribeStoryFade 12s linear infinite;
+}
+
+.subscribeStoryTwo {
+  animation-delay: 4s;
+}
+
+.subscribeStoryThree {
+  animation-delay: 8s;
+}
+
+.subscribePromoMarquee {
+  margin-top: 0;
+}
+
+/* МЕРЧ */
+
+.merchLogoNavContainer {
+  margin: 1vw;
+}
+
+.merchAboutNav {
+  margin-left: 0;
+}
+
+.merchSpecialistsNav,
+.merchSubscribeNav {
+  margin-left: 0.6vw;
+}
+
+.merchLeftStroke {
+  margin: 0;
+}
+
+.merchNavActive {
+  min-width: 6.2vw;
+  margin-left: 0;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  border-radius: 1.3vw;
+  color: #000000;
+  text-align: center;
+}
+
+.merchPage {
+  padding-top: 5.3vw;
+  background: linear-gradient(180deg, #ffffff 0%, #f6fbff 58%, #ffffff 100%);
+}
+
+.merchHero {
+  width: 100%;
+  height: 22vw;
+  overflow: hidden;
+  border-radius: 0 0 2.6vw 2.6vw;
+  background-color: #ffe481;
+}
+
+.merchHero img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.merchCatalog {
+  width: 100%;
+  padding: 4.7vw 4.8vw 5.3vw;
+  border-radius: 0 0 3vw 3vw;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+.merchSection + .merchSection {
+  margin-top: 4.1vw;
+}
+
+.merchSection h1 {
+  margin-bottom: 2.5vw;
+  font-family: "TTNormsProM";
+  font-size: 2.1vw;
+  font-weight: 500;
+  line-height: 1;
+  color: #000000;
+}
+
+.merchGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.1vw;
+}
+
+.merchCard {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 26.2vw;
+  overflow: hidden;
+  border: 0.08vw solid #f7b5c3;
+  border-radius: 0.7vw;
+  background-color: #ffffff;
+}
+
+.merchCardImage {
+  width: 100%;
+  height: 100%;
+  min-height: 26.2vw;
+  display: block;
+  object-fit: cover;
+}
+
+.merchCardInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25vw 1.45vw 4.5vw;
+  font-family: "TTNormsProN";
+}
+
+.merchTag {
+  width: fit-content;
+  min-width: 5.9vw;
+  margin-bottom: 2.5vw;
+  padding: 0.28vw 1vw 0.34vw;
+  border: 0.08vw solid #f4c9d0;
+  border-radius: 10vw;
+  text-align: center;
+  font-size: 0.95vw;
+  line-height: 1;
+  color: #efa7b7;
+}
+
+.merchCard h2 {
+  margin-bottom: 2vw;
+  font-family: "TTNormsProM";
+  font-size: 1.45vw;
+  font-weight: 500;
+  line-height: 1.15;
+  color: #000000;
+}
+
+.merchCard p {
+  max-width: 18vw;
+  font-size: 1vw;
+  line-height: 1.23;
+  color: #9a9a9a;
+}
+
+.merchPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8vw;
+  margin-top: auto;
+  white-space: nowrap;
+}
+
+.merchPrice strong {
+  font-family: "TTNormsProN";
+  font-size: 2.2vw;
+  font-weight: 400;
+  line-height: 1;
+  color: #6b86e7;
+}
+
+.merchPrice s {
+  font-size: 1.1vw;
+  line-height: 1;
+  color: #777777;
+  text-decoration-thickness: 0.08vw;
+}
+
+.merchPrice span {
+  font-size: 1.1vw;
+  line-height: 1;
+  color: #f89cae;
+}
+
+.merchButton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2.95vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f891a8;
+  font-family: "TTNormsProN";
+  font-size: 1.35vw;
+  line-height: 1;
+  color: #ffffff;
+  text-decoration: none;
+  transition: filter 0.25s ease;
+}
+
+.merchButton:hover {
+  filter: brightness(1.04);
+}
+
+.merchPromoMarquee {
+  margin-top: 0;
+}
+
+@keyframes subscribeStoryFade {
+  0%,
+  31% {
+    opacity: 1;
+  }
+
+  34%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes subscribeStoryProgress {
+  0% {
+    width: 0;
+  }
+
+  31% {
+    width: 100%;
+  }
+
+  34%,
+  100% {
+    width: 0;
+  }
 }
 
 .specialistsPage {

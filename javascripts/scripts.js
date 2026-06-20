@@ -238,5 +238,3 @@ if (lifeWhiteSector && lifeWhiteButton) {
     }
   });
 }
-
-// СТРАНИЦА О НАС
