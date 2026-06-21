@@ -1,0 +1,437 @@
+.mobileBottomMenu {
+  display: none;
+}
+
+.mobileMenuPanel {
+  display: none;
+}
+
+.mobileMenuBackdrop {
+  display: none;
+}
+
+@media (max-width: 25.875em) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    min-width: 0;
+    overflow-x: hidden;
+    background-color: #ffffff;
+  }
+
+  body.mobile-menu-open {
+    overflow: hidden;
+  }
+
+  .navMenu {
+    display: none;
+  }
+
+  .life {
+    height: 194vw;
+    padding-top: 0;
+    overflow: hidden;
+    background:
+      radial-gradient(
+        circle at 18% 3%,
+        rgba(190, 132, 255, 0.72),
+        transparent 38%
+      ),
+      radial-gradient(
+        circle at 88% 12%,
+        rgba(255, 192, 201, 0.78),
+        transparent 42%
+      ),
+      linear-gradient(135deg, #bd9af8 0%, #f8c5d0 100%);
+  }
+
+  .lifeImgAndText {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    gap: 3.3816vw;
+    width: max-content;
+    white-space: nowrap;
+    align-items: center;
+    animation: mobileLifeLineMove 8s linear infinite;
+  }
+
+  .lifeImgAndText:first-of-type {
+    margin-top: 46vw;
+  }
+
+  .lifeTextLittle {
+    font-size: 5.8vw;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  .lifeImgLittle img {
+    width: 8.2vw;
+  }
+
+  .lifeText {
+    position: relative;
+    z-index: 5;
+    display: inline-block;
+    min-width: max-content;
+    margin: 2vw 0 2.4vw;
+    font-size: 17.9vw;
+    letter-spacing: 0;
+    line-height: 1.05;
+    transform: scaleY(1.55);
+    animation: mobileLifeBigTextMove 8s linear infinite;
+  }
+
+  .lifeEraser {
+    z-index: 80;
+    touch-action: none;
+  }
+
+  .lifeWhiteSector {
+    top: 53.4vw;
+    height: 141vw;
+    z-index: 120;
+    transition: transform 0.7s ease;
+  }
+
+  .lifeWhiteSector.is-up {
+    transform: translateY(60vw);
+  }
+
+  .lifeWhiteSectorInner {
+    border-radius: 2vw 2vw 0 0;
+    overflow: visible;
+    background-color: #ffffff;
+  }
+
+  .lifeWhiteSectorInner,
+  .lifeWhiteSector:not(.is-up) .lifeWhiteSectorInner,
+  .lifeWhiteSector.is-up .lifeWhiteSectorInner {
+    animation: none;
+  }
+
+  .lifeWhiteButton {
+    top: 0;
+    bottom: auto;
+    width: 21.8vw;
+    height: 21.8vw;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+  }
+
+  .lifeWhiteButton .hover-ripple {
+    display: none;
+  }
+
+  .lifeWhiteButton .ripple {
+    width: 43.5vw;
+    height: 43.5vw;
+  }
+
+  .lifeWhiteArrow {
+    top: 45%;
+    width: 7.5vw;
+    height: 7.5vw;
+    border-left-width: 1.2vw;
+    border-top-width: 1.2vw;
+    border-radius: 0.5vw;
+    transform: translate(-50%, -50%) rotate(225deg);
+  }
+
+  .lifeWhiteSector.is-up .lifeWhiteArrow {
+    top: 55%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .lifeWhiteSubtitle {
+    top: 17.4vw;
+    bottom: auto;
+    font-size: 5.3vw;
+    color: #7f7f7f;
+    opacity: 1;
+  }
+
+  .lifeWhiteTitle {
+    top: 66.4vw;
+    width: 100%;
+    font-size: 12.6vw;
+    line-height: 1.08;
+    letter-spacing: 0;
+    white-space: normal;
+  }
+
+  .starAnimationBox {
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 2vw 2vw 0 0;
+  }
+
+  .starAnimation {
+    animation-name: mobileStarFall;
+  }
+
+  .mobileBottomMenu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 300;
+    height: 16.7vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 7.3vw;
+    border-radius: 2vw 2vw 0 0;
+    background-color: #ffffff;
+    box-shadow: 0 -2.4vw 6.7vw rgba(0, 0, 0, 0.08);
+  }
+
+  .mobileMenuBackdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 280;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.58);
+    opacity: 0;
+    backdrop-filter: blur(2.9vw);
+    -webkit-backdrop-filter: blur(2.9vw);
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  .mobileMenuBackdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobileMenuPanel {
+    position: fixed;
+    left: 0vw;
+    right: 4.3vw;
+    bottom: 0;
+    z-index: 290;
+    width: 100vw;
+    display: block;
+    padding: 22.4vw 0 35.6vw;
+    border-radius: 6.28vw 6.28vw 0 0;
+    background-color: #6b86e7;
+    transform: translateY(100%);
+    transition: transform 0.55s ease;
+    pointer-events: none;
+  }
+
+  .mobileMenuPanel.is-open {
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobileMenuLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8vw;
+  }
+
+  .mobileMenuLogoLink,
+  .mobileMenuLink {
+    width: 64vw;
+    min-height: 18vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.24vw solid #ffc4c9;
+    border-radius: 4.8vw;
+    font-family: "TTNormsProN";
+    font-size: 7vw;
+    line-height: 1;
+    color: #ffc4c9;
+    text-decoration: none;
+  }
+
+  .mobileMenuLogoLink img {
+    width: 35.3vw;
+    height: auto;
+    display: block;
+  }
+
+  .mobileMenuLogoLink.is-active,
+  .mobileMenuLink.is-active {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .mobileMenuButton {
+    position: relative;
+    z-index: 2;
+    width: 9.7vw;
+    height: 8.7vw;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.4vw;
+    border: 0;
+    background: transparent;
+  }
+
+  .mobileMenuButton span {
+    width: 8.9vw;
+    height: 1.2vw;
+    display: block;
+    border-radius: 4.8309vw;
+    background-color: #000000;
+  }
+
+  .blueSector {
+    width: 100%;
+    min-height: 100vw;
+    padding-top: 26.1vw;
+    overflow: hidden;
+    background-color: #6b86e7;
+    border-radius: 0;
+  }
+
+  .blueSector .blueSector {
+    min-height: 100vw;
+    padding-top: 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .blueSectorTitle {
+    max-width: 65vw;
+    margin: 0 auto 16vw;
+    font-size: 7.5vw;
+    line-height: 0.95;
+  }
+
+  .problemCardsWrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .problemCardsTrack {
+    animation-duration: 16s;
+  }
+
+  .problemCards {
+    gap: 7.2vw;
+    padding-right: 7.2vw;
+  }
+
+  .problemCard {
+    min-width: 51.4vw;
+    height: 25.8vw;
+    padding: 0 6.3vw;
+    border-width: 0.2vw;
+    border-radius: 1.9vw;
+    font-size: 6.06vw;
+  }
+
+  .problemWords span {
+    height: 25.8vw;
+  }
+
+  @keyframes problemWordsMove {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-77.5vw);
+    }
+  }
+
+  .footer {
+    padding: 10vw 6.3vw 22.7vw;
+  }
+
+  .footerTop {
+    display: none;
+  }
+
+  .footerBottom {
+    margin-top: 0;
+    gap: 5.3vw;
+    align-items: flex-start;
+  }
+
+  .footerBottom img {
+    width: 35.3vw;
+    flex: 0 0 auto;
+  }
+
+  .footerBottom p {
+    max-width: 43vw;
+    font-size: 2.4vw;
+    line-height: 1.15;
+  }
+
+  .footerCopyright {
+    margin-top: 4.8vw;
+    font-size: 3vw;
+    line-height: 1.1;
+  }
+
+  @keyframes mobileWhiteSectorIdleMove {
+    0% {
+      transform: translateY(0);
+    }
+
+    12% {
+      transform: translateY(-2.4vw);
+    }
+
+    24% {
+      transform: translateY(0);
+    }
+
+    36% {
+      transform: translateY(-2.4vw);
+    }
+
+    48% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes mobileLifeLineMove {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes mobileLifeBigTextMove {
+    0% {
+      transform: translateX(0) scaleY(1.55);
+    }
+
+    100% {
+      transform: translateX(-50%) scaleY(1.55);
+    }
+  }
+
+  @keyframes mobileStarFall {
+    0% {
+      transform: translateY(-29vw) rotate(0deg);
+    }
+
+    100% {
+      transform: translateY(154vw) rotate(360deg);
+    }
+  }
+}

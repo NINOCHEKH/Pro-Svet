@@ -50,6 +50,47 @@ function initNavHoverAnimation() {
 
 document.addEventListener("DOMContentLoaded", initNavHoverAnimation);
 
+function initMobileMenu() {
+  const mobileMenuPanel = document.querySelector(".mobileMenuPanel");
+  const mobileMenuButton = document.querySelector(".mobileMenuButton");
+  const mobileMenuBackdrop = document.querySelector(".mobileMenuBackdrop");
+  const mobileMenuLinks = document.querySelectorAll(
+    ".mobileMenuLogoLink, .mobileMenuLink"
+  );
+
+  if (!mobileMenuPanel || !mobileMenuButton) return;
+
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+  mobileMenuLinks.forEach((link) => {
+    if (link.dataset.page === currentPage) {
+      link.classList.add("is-active");
+    }
+  });
+
+  function setMobileMenuOpen(isOpen) {
+    mobileMenuPanel.classList.toggle("is-open", isOpen);
+    mobileMenuBackdrop?.classList.toggle("is-open", isOpen);
+    mobileMenuButton.classList.toggle("is-open", isOpen);
+    document.body.classList.toggle("mobile-menu-open", isOpen);
+    mobileMenuPanel.setAttribute("aria-hidden", String(!isOpen));
+    mobileMenuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Закрыть меню" : "Открыть меню"
+    );
+  }
+
+  mobileMenuButton.addEventListener("click", () => {
+    setMobileMenuOpen(!mobileMenuPanel.classList.contains("is-open"));
+  });
+
+  mobileMenuBackdrop?.addEventListener("click", () => {
+    setMobileMenuOpen(false);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initMobileMenu);
+
 // стерка
 window.addEventListener("load", () => {
   const life = document.querySelector(".life");
@@ -110,7 +151,23 @@ window.addEventListener("load", () => {
 
   resizeCanvas();
 
-  canvas.addEventListener("mousemove", erase);
+  canvas.addEventListener("pointerdown", (event) => {
+    lastX = null;
+    lastY = null;
+    erase(event);
+  });
+  canvas.addEventListener("pointermove", (event) => {
+    event.preventDefault();
+    erase(event);
+  });
+  canvas.addEventListener("pointerup", () => {
+    lastX = null;
+    lastY = null;
+  });
+  canvas.addEventListener("pointercancel", () => {
+    lastX = null;
+    lastY = null;
+  });
 
   canvas.addEventListener("mouseleave", () => {
     lastX = null;
@@ -150,15 +207,6 @@ window.addEventListener("load", () => {
   window.addEventListener("resize", resizeCanvas);
 
   // рандомные звезды
-  canvas.addEventListener("mousemove", (event) => {
-    const lifeWhiteSector = document.querySelector(".lifeWhiteSector");
-
-    if (!lifeWhiteSector.classList.contains("is-up")) return;
-
-    erase(event);
-  });
-  window.addEventListener("resize", resizeCanvas);
-
   const starAnimationBox = document.querySelector(".starAnimationBox");
 
   if (starAnimationBox) {
@@ -175,10 +223,14 @@ window.addEventListener("load", () => {
       const star = document.createElement("img");
       const randomImage =
         starImages[Math.floor(Math.random() * starImages.length)];
-      const randomSize = 2 + Math.random() * 7;
+      const isMobile = window.matchMedia("(max-width: 414px)").matches;
+      const randomSize = isMobile
+        ? 10 + Math.random() * 12
+        : 2 + Math.random() * 7;
       const randomLeft = Math.random() * 100;
       const randomDuration = 5 + Math.random() * 5;
       const randomDelay = Math.random() * -8;
+      const randomTop = isMobile ? Math.random() * 100 : null;
 
       star.classList.add("starAnimation");
       star.src = randomImage;
@@ -188,6 +240,10 @@ window.addEventListener("load", () => {
       star.style.left = `${randomLeft}%`;
       star.style.animationDuration = `${randomDuration}s`;
       star.style.animationDelay = `${randomDelay}s`;
+
+      if (isMobile) {
+        star.style.top = `${randomTop}%`;
+      }
 
       star.addEventListener("mouseenter", () => {
         star.classList.add("is-disappearing");
