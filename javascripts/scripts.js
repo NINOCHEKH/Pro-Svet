@@ -1,3 +1,55 @@
+function initNavHoverAnimation() {
+  const navButtons = document.querySelectorAll(
+    ".aboutNavContainer, .otherNavContainer"
+  );
+
+  navButtons.forEach((button) => {
+    if (
+      button.classList.contains("aboutNavActive") ||
+      button.classList.contains("specialistsNavActive") ||
+      button.classList.contains("subscribeNavActive") ||
+      button.classList.contains("merchNavActive")
+    ) {
+      return;
+    }
+
+    if (button.dataset.navHoverReady === "true") return;
+
+    button.dataset.navHoverReady = "true";
+
+    button.addEventListener("mouseenter", (event) => {
+      const oldRipple = button.querySelector(".navHoverRipple");
+
+      if (oldRipple) {
+        oldRipple.remove();
+      }
+
+      const rect = button.getBoundingClientRect();
+      const ripple = document.createElement("span");
+
+      ripple.classList.add("navHoverRipple");
+      ripple.style.left = `${event.clientX - rect.left}px`;
+      ripple.style.top = `${event.clientY - rect.top}px`;
+
+      button.appendChild(ripple);
+    });
+
+    button.addEventListener("mouseleave", () => {
+      const ripple = button.querySelector(".navHoverRipple");
+
+      if (ripple) {
+        ripple.classList.add("is-leaving");
+
+        setTimeout(() => {
+          ripple.remove();
+        }, 450);
+      }
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initNavHoverAnimation);
+
 // стерка
 window.addEventListener("load", () => {
   const life = document.querySelector(".life");
@@ -63,41 +115,6 @@ window.addEventListener("load", () => {
   canvas.addEventListener("mouseleave", () => {
     lastX = null;
     lastY = null;
-
-    const navButtons = document.querySelectorAll(
-      ".aboutNavContainer, .otherNavContainer"
-    );
-
-    navButtons.forEach((button) => {
-      button.addEventListener("mouseenter", (event) => {
-        const oldRipple = button.querySelector(".navHoverRipple");
-
-        if (oldRipple) {
-          oldRipple.remove();
-        }
-
-        const rect = button.getBoundingClientRect();
-        const ripple = document.createElement("span");
-
-        ripple.classList.add("navHoverRipple");
-        ripple.style.left = `${event.clientX - rect.left}px`;
-        ripple.style.top = `${event.clientY - rect.top}px`;
-
-        button.appendChild(ripple);
-      });
-
-      button.addEventListener("mouseleave", () => {
-        const ripple = button.querySelector(".navHoverRipple");
-
-        if (ripple) {
-          ripple.classList.add("is-leaving");
-
-          setTimeout(() => {
-            ripple.remove();
-          }, 450);
-        }
-      });
-    });
 
     const aboutAccordion = document.querySelector(".aboutAccordion");
 

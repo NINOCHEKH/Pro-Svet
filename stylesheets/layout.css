@@ -1357,27 +1357,17 @@ body {
 }
 
 .subscribePlan li::before {
-  content: "✦";
+  content: "";
   position: absolute;
   left: 0;
-  top: -0.12vw;
-  width: 1.35vw;
-  height: 1.35vw;
-  border-radius: 0.35vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 0.1vw solid #f89cae;
-  background-color: #ffe3e9;
-  color: #f48aa1;
-  font-size: 1vw;
-  line-height: 1;
+  top: -0.2vw;
+  width: 1.7vw;
+  height: 1.7vw;
+  background: url("../images/starPink.svg") center / contain no-repeat;
 }
 
 .subscribePlanPink li::before {
-  border-color: #6b62d8;
-  background-color: #f4b5c7;
-  color: #6b62d8;
+  background-image: url("../images/StarPurple.svg");
 }
 
 .subscribePlanButton {
@@ -1656,6 +1646,122 @@ body {
 }
 
 .merchPromoMarquee {
+  margin-top: 0;
+}
+
+/* 404 */
+
+.notFoundNav {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 5.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6b86e7;
+  border-radius: 0 0 1vw 1vw;
+}
+
+.notFoundLogo {
+  height: 2.9vw;
+  padding: 0 2.7vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1vw solid #ffc4c9;
+  border-radius: 0.8vw;
+}
+
+.notFoundLogo img {
+  width: 7vw;
+  height: auto;
+  display: block;
+}
+
+.notFoundPage {
+  background-color: #ffffff;
+}
+
+.notFoundHero {
+  position: relative;
+  width: 100%;
+  height: 47.8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0 0 3vw 3vw;
+  background:
+    radial-gradient(
+      circle at 93% 88%,
+      rgba(214, 255, 222, 0.62),
+      transparent 13%
+    ),
+    #ffffff;
+}
+
+.notFoundHero h1 {
+  position: relative;
+  z-index: 2;
+  margin-top: 2.2vw;
+  font-family: "TTNormsProM";
+  font-size: 17.2vw;
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.notFoundStar {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+}
+
+.notFoundStarYellow {
+  z-index: 1;
+  width: 25.5vw;
+  left: 20.7vw;
+  top: 3.1vw;
+}
+
+.notFoundStarMint {
+  z-index: 3;
+  width: 12.6vw;
+  right: 24.8vw;
+  top: 17.2vw;
+}
+
+.notFoundButton {
+  position: relative;
+  z-index: 4;
+  min-width: 34vw;
+  height: 5vw;
+  margin-top: 5.3vw;
+  padding: 0 3.8vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5vw;
+  background-color: #f891a8;
+  font-family: "TTNormsProM";
+  font-size: 2vw;
+  line-height: 1;
+  color: #ffffff;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.notFoundButton:hover {
+  transform: translateY(-0.12vw);
+  filter: brightness(1.04);
+}
+
+.notFoundPromoMarquee {
   margin-top: 0;
 }
 
