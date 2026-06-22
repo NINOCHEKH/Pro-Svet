@@ -91,6 +91,23 @@ function initMobileMenu() {
 
 document.addEventListener("DOMContentLoaded", initMobileMenu);
 
+function initMobileSubscribePlans() {
+  const subscribePlans = document.querySelectorAll("[data-subscribe-plan]");
+  const subscribeNext = document.querySelector(".mobileSubscribeNext");
+
+  if (!subscribePlans.length || !subscribeNext) return;
+
+  subscribePlans.forEach((plan) => {
+    plan.addEventListener("click", () => {
+      subscribePlans.forEach((item) => item.classList.remove("is-selected"));
+      plan.classList.add("is-selected");
+      subscribeNext.classList.add("is-enabled");
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initMobileSubscribePlans);
+
 // стерка
 window.addEventListener("load", () => {
   const life = document.querySelector(".life");

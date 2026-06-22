@@ -102,23 +102,101 @@
         <h2 id="topCategoriesTitle">Топ категорий</h2>
 
         <div class="topCategoriesList">
-          <span class="categoryTag categoryTagBlue">Фобии</span>
-          <span class="categoryTag categoryTagPink">ПРЛ</span>
-          <span class="categoryTag categoryTagPeriwinkle">Депрессия</span>
-          <span class="categoryTag categoryTagMint">БАР</span>
-          <span class="categoryTag categoryTagOrange">ОКР</span>
-          <span class="categoryTag categoryTagMagenta">Алекситимия</span>
-          <span class="categoryTag categoryTagCyan">ПТСР</span>
-          <span class="categoryTag categoryTagPurple">Нарциссизм</span>
-          <span class="categoryTag categoryTagSky">СДВГ</span>
-          <span class="categoryTag categoryTagYellow">Тревожность</span>
-          <span class="categoryTag categoryTagViolet">Кризис</span>
-          <span class="categoryTag categoryTagGreen">Травля</span>
-          <span class="categoryTag categoryTagAqua">Опустошённость</span>
-          <span class="categoryTag categoryTagRose">Агрессия</span>
-          <span class="categoryTag categoryTagSea">Психологические травмы</span>
-          <span class="categoryTag categoryTagSand">Социофобия</span>
-          <span class="categoryTag categoryTagAzure">Булимия</span>
+          <div class="topCategoriesRow">
+            <div class="topCategoriesTrack">
+              <span class="categoryTag categoryTagBlue">Фобии</span>
+              <span class="categoryTag categoryTagPink">ПРЛ</span>
+              <span class="categoryTag categoryTagPeriwinkle">Депрессия</span>
+              <span class="categoryTag categoryTagMint">БАР</span>
+              <span class="categoryTag categoryTagOrange">ОКР</span>
+              <span class="categoryTag categoryTagMagenta">Алекситимия</span>
+              <span class="categoryTag categoryTagCyan categoryTagDuplicate"
+                >ПТСР</span
+              >
+              <span class="categoryTag categoryTagBlue categoryTagDuplicate"
+                >Фобии</span
+              >
+              <span class="categoryTag categoryTagPink categoryTagDuplicate"
+                >ПРЛ</span
+              >
+              <span
+                class="categoryTag categoryTagPeriwinkle categoryTagDuplicate"
+                >Депрессия</span
+              >
+              <span class="categoryTag categoryTagMint categoryTagDuplicate"
+                >БАР</span
+              >
+              <span class="categoryTag categoryTagOrange categoryTagDuplicate"
+                >ОКР</span
+              >
+              <span class="categoryTag categoryTagMagenta categoryTagDuplicate"
+                >Алекситимия</span
+              >
+              <span class="categoryTag categoryTagCyan categoryTagDuplicate"
+                >ПТСР</span
+              >
+            </div>
+          </div>
+
+          <div class="topCategoriesRow">
+            <div class="topCategoriesTrack">
+              <span class="categoryTag categoryTagPurple">Нарциссизм</span>
+              <span class="categoryTag categoryTagSky">СДВГ</span>
+              <span class="categoryTag categoryTagYellow">Тревожность</span>
+              <span class="categoryTag categoryTagViolet">Кризис</span>
+              <span class="categoryTag categoryTagGreen">Травля</span>
+              <span class="categoryTag categoryTagAqua">Опустошённость</span>
+              <span class="categoryTag categoryTagPurple categoryTagDuplicate"
+                >Нарциссизм</span
+              >
+              <span class="categoryTag categoryTagSky categoryTagDuplicate"
+                >СДВГ</span
+              >
+              <span class="categoryTag categoryTagYellow categoryTagDuplicate"
+                >Тревожность</span
+              >
+              <span class="categoryTag categoryTagViolet categoryTagDuplicate"
+                >Кризис</span
+              >
+              <span class="categoryTag categoryTagGreen categoryTagDuplicate"
+                >Травля</span
+              >
+              <span class="categoryTag categoryTagAqua categoryTagDuplicate"
+                >Опустошённость</span
+              >
+            </div>
+          </div>
+
+          <div class="topCategoriesRow">
+            <div class="topCategoriesTrack">
+              <span class="categoryTag categoryTagRose">Агрессия</span>
+              <span class="categoryTag categoryTagSea"
+                >Психологические травмы</span
+              >
+              <span class="categoryTag categoryTagSand">Социофобия</span>
+              <span class="categoryTag categoryTagAzure">Булимия</span>
+              <span class="categoryTag categoryTagBlue">Фобии</span>
+              <span class="categoryTag categoryTagCyan">ПТСР</span>
+              <span class="categoryTag categoryTagRose categoryTagDuplicate"
+                >Агрессия</span
+              >
+              <span class="categoryTag categoryTagSea categoryTagDuplicate"
+                >Психологические травмы</span
+              >
+              <span class="categoryTag categoryTagSand categoryTagDuplicate"
+                >Социофобия</span
+              >
+              <span class="categoryTag categoryTagAzure categoryTagDuplicate"
+                >Булимия</span
+              >
+              <span class="categoryTag categoryTagBlue categoryTagDuplicate"
+                >Фобии</span
+              >
+              <span class="categoryTag categoryTagCyan categoryTagDuplicate"
+                >ПТСР</span
+              >
+            </div>
+          </div>
         </div>
       </section>
 
@@ -152,7 +230,7 @@
             <div class="specialistCardTop">
               <img src="images/MarinaBoblova.svg" alt="" />
               <div>
-                <h3>Рита<br />Боброва</h3>
+                <h3>Марина<br />Петрова</h3>
                 <p>Семейный психолог</p>
               </div>
             </div>
@@ -194,7 +272,7 @@
             <div class="specialistCardTop">
               <img src="images/SergeyBelyaev.svg" alt="" />
               <div>
-                <h3>Макс<br />Беляев</h3>
+                <h3>Сергей<br />Беляев</h3>
                 <p>Психолог</p>
               </div>
             </div>
@@ -282,6 +360,42 @@
         <span>С 16 апреля по 16 мая при регистрации первый месяц бесплатно!</span>
       </div>
     </section>
+
+    <div class="mobileMenuBackdrop" aria-hidden="true"></div>
+
+    <div class="mobileMenuPanel" aria-hidden="true">
+      <div class="mobileMenuLinks">
+        <a class="mobileMenuLogoLink" href="index.html" data-page="index.html">
+          <img src="images/logoNavDeactivate.svg" alt="ProSvet" />
+        </a>
+        <a class="mobileMenuLink" href="about.html" data-page="about.html"
+          >О нас</a
+        >
+        <a
+          class="mobileMenuLink"
+          href="specialists.html"
+          data-page="specialists.html"
+          >Специалисты</a
+        >
+        <a
+          class="mobileMenuLink"
+          href="subscribe.html"
+          data-page="subscribe.html"
+          >Подписка</a
+        >
+        <a class="mobileMenuLink" href="merch.html" data-page="merch.html"
+          >Мерч</a
+        >
+      </div>
+    </div>
+
+    <nav class="mobileBottomMenu" aria-label="Мобильное меню">
+      <button class="mobileMenuButton" type="button" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
 
     <footer class="footer">
       <div class="footerTop">

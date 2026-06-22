@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script defer src="javascripts/scripts.js"></script>
   </head>
-  <body>
+  <body class="subscribePageBody">
     <section class="navMenu">
       <nav class="main_menu">
         <a href="index.html" class="logoNavAbout">
@@ -59,7 +59,7 @@
           </div>
 
           <div class="subscribePlans">
-            <article class="subscribePlan subscribePlanLight">
+            <article class="subscribePlan subscribePlanLight" data-subscribe-plan>
               <h2>1 месяц</h2>
               <strong>4 999 руб/год</strong>
               <ul>
@@ -74,7 +74,7 @@
               >
             </article>
 
-            <article class="subscribePlan subscribePlanPink">
+            <article class="subscribePlan subscribePlanPink" data-subscribe-plan>
               <h2>1 год</h2>
               <p><s>60 000 руб</s> <span>25%</span></p>
               <strong>45 000 руб/год</strong>
@@ -116,6 +116,44 @@
         </div>
       </section>
     </main>
+
+    <a class="mobileSubscribeNext" href="404.html">Далее</a>
+
+    <div class="mobileMenuBackdrop" aria-hidden="true"></div>
+
+    <div class="mobileMenuPanel" aria-hidden="true">
+      <div class="mobileMenuLinks">
+        <a class="mobileMenuLogoLink" href="index.html" data-page="index.html">
+          <img src="images/logoNavDeactivate.svg" alt="ProSvet" />
+        </a>
+        <a class="mobileMenuLink" href="about.html" data-page="about.html"
+          >О нас</a
+        >
+        <a
+          class="mobileMenuLink"
+          href="specialists.html"
+          data-page="specialists.html"
+          >Специалисты</a
+        >
+        <a
+          class="mobileMenuLink"
+          href="subscribe.html"
+          data-page="subscribe.html"
+          >Подписка</a
+        >
+        <a class="mobileMenuLink" href="merch.html" data-page="merch.html"
+          >Мерч</a
+        >
+      </div>
+    </div>
+
+    <nav class="mobileBottomMenu" aria-label="Мобильное меню">
+      <button class="mobileMenuButton" type="button" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
 
     <section class="promoMarquee subscribePromoMarquee" aria-label="Акция">
       <div class="promoMarqueeTrack">

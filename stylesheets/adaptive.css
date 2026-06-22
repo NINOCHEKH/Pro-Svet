@@ -10,7 +10,11 @@
   display: none;
 }
 
-@media (max-width: 25.875em) {
+.mobileSubscribeNext {
+  display: none;
+}
+
+@media (max-width: 414px) {
   * {
     box-sizing: border-box;
   }
@@ -23,6 +27,14 @@
 
   body.mobile-menu-open {
     overflow: hidden;
+  }
+
+  .aboutPageBody {
+    background-color: #6b86e7;
+  }
+
+  .subscribePageBody {
+    background-color: #ffffff;
   }
 
   .navMenu {
@@ -377,6 +389,712 @@
     margin-top: 4.8vw;
     font-size: 3vw;
     line-height: 1.1;
+  }
+
+  .subscribePage {
+    padding-top: 0;
+  }
+
+  .subscribeHero {
+    display: block;
+    height: auto;
+    overflow: visible;
+    border-radius: 0;
+    background-color: #ffffff;
+  }
+
+  .subscribeStories {
+    display: none;
+  }
+
+  .subscribeInfo {
+    display: block;
+    padding: 18vw 6.5vw 11.8vw;
+    background: #ffffff;
+  }
+
+  .subscribeIntro img {
+    width: 65vw;
+    margin-bottom: 13vw;
+  }
+
+  .subscribeIntro p {
+    font-size: 4.1vw;
+    line-height: 1.06;
+  }
+
+  .subscribePlans {
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+    margin-top: 12vw;
+  }
+
+  .subscribePlan {
+    min-height: 28.5vw;
+    padding: 3.8vw 18vw 4.3vw 6vw;
+    border: 0.24vw solid #f89cae;
+    border-radius: 6.5vw;
+    overflow: visible;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
+  .subscribePlan::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    width: 7.2vw;
+    height: 7.2vw;
+    border: 0.24vw solid #f89cae;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  .subscribePlan.is-selected {
+    border-color: #febdc9;
+    background-color: rgba(254, 189, 201, 0.4);
+  }
+
+  .subscribePlan.is-selected::after {
+    border-color: #febdc9;
+    background: #febdc9 url("../images/mobileSelectStarSubscribe.svg") center /
+      4.4vw auto no-repeat;
+  }
+
+  .subscribePlanLight {
+    border-color: #9f9f9f;
+    background-color: #ffffff;
+  }
+
+  .subscribePlanPink {
+    background-color: #ffffff;
+    border-color: #9f9f9f;
+  }
+
+  .subscribePlan h2 {
+    display: inline;
+    margin: 0 2.4vw 0 0;
+    font-size: 5vw;
+    line-height: 1;
+  }
+
+  .subscribePlan strong {
+    display: inline;
+    margin: 0;
+    font-size: 5vw;
+    line-height: 1;
+    color: #8a8a8a;
+  }
+
+  .subscribePlan p {
+    display: none;
+  }
+
+  .subscribePlanPink p {
+    position: absolute;
+    top: -4.2vw;
+    right: 13vw;
+    min-width: 16vw;
+    height: 7.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-radius: 10vw;
+    background-color: #6b4bd1;
+    font-size: 0;
+  }
+
+  .subscribePlanPink p s {
+    display: none;
+  }
+
+  .subscribePlanPink p span {
+    font-size: 4.2vw;
+    line-height: 1;
+    color: #ffffff;
+  }
+
+  .subscribePlan ul {
+    gap: 0;
+    margin-top: 5vw;
+  }
+
+  .subscribePlan li {
+    padding-left: 3.2vw;
+    font-size: 3.7vw;
+    line-height: 1.05;
+  }
+
+  .subscribePlan li::before {
+    top: 0vw;
+    left: -1vw;
+    width: 3.3vw;
+    height: 3.3vw;
+  }
+
+  .subscribePlanPink li::before {
+    background-image: url("../images/starPink.svg");
+  }
+
+  .subscribePlanButton {
+    display: none;
+  }
+
+  .mobileSubscribeNext {
+    width: 87.4vw;
+    height: 13vw;
+    margin: 0 auto 11.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.24vw solid #6b86e7;
+    border-radius: 1vw;
+    background-color: transparent;
+    font-family: "TTNormsProN";
+    font-size: 5vw;
+    line-height: 1;
+    color: #000000;
+    text-decoration: none;
+    pointer-events: none;
+  }
+
+  .mobileSubscribeNext.is-enabled {
+    background-color: rgba(107, 134, 231, 0.5);
+    pointer-events: auto;
+  }
+
+  .specialistsPage {
+    padding-top: 0;
+    background-color: #ffffff;
+  }
+
+  .specialistsHero {
+    height: 66.7vw;
+    border-radius: 0 0 9vw 9vw;
+    background-image: url("../images/mobileBanner.svg");
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .specialistsHeroText {
+    left: 15.5vw;
+    top: 31vw;
+  }
+
+  .specialistsHeroText h1 {
+    margin: 0;
+    font-size: 9.4vw;
+    line-height: 1.1;
+  }
+
+  .specialistsHeroText p,
+  .specialistsAvatarMarquee,
+  .specialistsStats {
+    display: none;
+  }
+
+  .topCategories {
+    padding: 11.8vw 0 7.6vw;
+    overflow: hidden;
+  }
+
+  .topCategories h2 {
+    margin-bottom: 7.5vw;
+    font-size: 6.8vw;
+    line-height: 1;
+  }
+
+  .topCategoriesList {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3.4vw;
+  }
+
+  .topCategoriesRow {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .topCategoriesTrack {
+    width: max-content;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 4vw;
+    animation: mobileCategoryMarquee 16s linear infinite;
+  }
+
+  .topCategoriesRow:nth-child(2) .topCategoriesTrack {
+    animation-name: mobileCategoryMarqueeReverse;
+    animation-duration: 18s;
+  }
+
+  .topCategoriesRow:nth-child(3) .topCategoriesTrack {
+    animation-duration: 20s;
+  }
+
+  .categoryTagDuplicate {
+    display: inline-flex;
+  }
+
+  .categoryTag {
+    min-width: 15.8vw;
+    padding: 1.5vw 4.2vw 1.7vw;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5vw;
+    font-size: 3.5vw;
+    pointer-events: none;
+  }
+
+  .categoryTag:hover {
+    transform: none;
+  }
+
+  @keyframes mobileCategoryMarquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(calc(-50% - 2vw));
+    }
+  }
+
+  @keyframes mobileCategoryMarqueeReverse {
+    0% {
+      transform: translateX(calc(-50% - 2vw));
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .specialistsDirectory {
+    padding: 6.4vw 4.3vw 11.4vw;
+  }
+
+  .specialistsDirectory h2 {
+    margin-bottom: 7.5vw;
+    font-size: 6.8vw;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .specialistsCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5vw 4.3vw;
+  }
+
+  .specialistPromo {
+    display: none;
+  }
+
+  .specialistCard {
+    min-height: 58vw;
+    padding: 3.4vw 2.4vw 13.2vw;
+    border-width: 0.24vw;
+    border-radius: 2vw;
+  }
+
+  .specialistRating,
+  .specialistMeta {
+    display: none;
+  }
+
+  .specialistCardTop {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4vw;
+    text-align: center;
+  }
+
+  .specialistCardTop img {
+    width: 16.8vw;
+    height: 16.8vw;
+    flex-basis: 16.8vw;
+    border: 0.24vw solid #f7b7c6;
+  }
+
+  .specialistCard h3 {
+    margin: 0 0 2.2vw;
+    font-size: 4.8vw;
+    line-height: 0.92;
+  }
+
+  .specialistCardTop p {
+    font-size: 3.7vw;
+    line-height: 1;
+    color: #8a8a8a;
+  }
+
+  .specialistTags {
+    left: 2.4vw;
+    right: 2.4vw;
+    bottom: 13.8vw;
+    justify-content: center;
+    gap: 2.2vw;
+  }
+
+  .specialistTag {
+    min-width: 14vw;
+    padding: 1.25vw 2.6vw 1.35vw;
+    border-radius: 5vw;
+    font-size: 2.55vw;
+  }
+
+  .specialistButton {
+    height: 8.9vw;
+    font-size: 4.4vw;
+  }
+
+  .specialistsPromoMarquee {
+    height: 12vw;
+    margin-top: 0;
+    border-radius: 0;
+  }
+
+  .specialistsPromoMarquee .promoMarqueeTrack span {
+    font-size: 6vw;
+  }
+
+  .subscribePromoMarquee {
+    height: 12vw;
+    margin-top: 0;
+    border-radius: 0;
+  }
+
+  .subscribePromoMarquee .promoMarqueeTrack span {
+    font-size: 6vw;
+  }
+
+  .notFoundNav,
+  .notFoundPromoMarquee,
+  .notFoundPage + .promoMarquee,
+  .notFoundPage ~ .footer {
+    display: none;
+  }
+
+  .notFoundPage {
+    display: block;
+    min-height: 100vh;
+    background-color: #ffffff;
+  }
+
+  .notFoundHero {
+    height: 100vh;
+    overflow: visible;
+    border-radius: 0;
+    background: #ffffff;
+  }
+
+  .notFoundHero h1 {
+    margin-top: -5vw;
+    font-size: 31vw;
+    line-height: 0.8;
+  }
+
+  .notFoundStarYellow {
+    width: 38vw;
+    left: 4vw;
+    top: 76vw;
+  }
+
+  .notFoundStarMint {
+    width: 18vw;
+    right: 11vw;
+    top: 99vw;
+  }
+
+  .notFoundButton {
+    min-width: 87.5vw;
+    height: 13.5vw;
+    margin-top: 23vw;
+    padding: 0 5vw;
+    border: 0.24vw solid #f891a8;
+    border-radius: 1vw;
+    background-color: rgba(248, 145, 168, 0.35);
+    font-family: "TTNormsProN";
+    font-size: 4.8vw;
+    color: #000000;
+  }
+
+  .aboutAccordion {
+    --mobile-tab: 15.4vw;
+    width: 100%;
+    height: 179vw;
+    margin-top: 20.3vw;
+    overflow: hidden;
+    border-radius: 7vw 7vw 0 0;
+    background-color: #ffffff;
+  }
+
+  .aboutAccordion::after {
+    display: none;
+  }
+
+  .aboutSlide {
+    width: 100%;
+    height: 179vw;
+    border-radius: 7vw 7vw 0 0;
+    transition: transform 0.7s ease;
+  }
+
+  .aboutSlideTab {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: var(--mobile-tab);
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 7vw;
+    line-height: 1;
+  }
+
+  .aboutSlideContent {
+    padding: 6.2vw 7.8vw 0;
+    text-align: center;
+  }
+
+  .aboutSlideContent h1 {
+    margin-bottom: 12.5vw;
+    font-size: 7vw;
+    line-height: 1;
+  }
+
+  .aboutSlideGrid,
+  .aboutCollabText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.8vw;
+  }
+
+  .aboutSlideGrid h2,
+  .aboutCollabText h2 {
+    font-size: 7vw;
+    line-height: 0.95;
+  }
+
+  .aboutSlideGrid p,
+  .aboutSlideContent p,
+  .aboutCollabText p {
+    max-width: 88vw;
+    font-size: 5.2vw;
+    line-height: 1.06;
+  }
+
+  .aboutSlideHelp {
+    border: 0;
+  }
+
+  .aboutSlideHelp .aboutSlideContent {
+    opacity: 1;
+  }
+
+  .aboutSlideHelp .aboutSlideTab {
+    color: #f995aa;
+    font-size: 7vw;
+  }
+
+  .aboutSlideHelp .aboutSlideTab {
+    font-size: 0;
+  }
+
+  .aboutSlideHelp .aboutSlideTab::after {
+    content: "Наша помощь это...";
+    font-size: 7vw;
+  }
+
+  .aboutSlideHelp .aboutSlideContent h1 {
+    display: none;
+  }
+
+  .aboutSlideHelp .aboutSlideContent {
+    padding-top: 27vw;
+  }
+
+  .aboutSlideHelp .aboutSlideGrid h2 {
+    color: #f995aa;
+  }
+
+  .aboutSlideHelp .aboutSlideGrid p {
+    margin-bottom: 7vw;
+    color: #000000;
+  }
+
+  .aboutSlideAlone .aboutSlideContent,
+  .aboutSlideReviews .aboutSlideContent,
+  .aboutSlideCollab .aboutSlideContent {
+    padding: 17.5vw 7.5vw 0;
+  }
+
+  .aboutSlideAlone .aboutSlideContent h1,
+  .aboutSlideCollab .aboutSlideContent h1 {
+    display: none;
+  }
+
+  .aboutSlideAlone .aboutSlideGrid {
+    gap: 5.4vw;
+  }
+
+  .aboutSlideAlone .aboutSlideGrid h2 {
+    color: #ffffff;
+  }
+
+  .aboutSlideAlone .aboutSlideGrid p {
+    margin-bottom: 6vw;
+    color: #000000;
+  }
+
+  .aboutSlideReviews .aboutSlideContent h1 {
+    max-width: 78vw;
+    margin: 4.8vw auto 4.4vw;
+    font-size: 7vw;
+    line-height: 0.95;
+    color: #ffffff;
+  }
+
+  .aboutSlideReviews .aboutSlideLead {
+    max-width: 76vw;
+    margin: 0 auto;
+    font-size: 5.5vw;
+    line-height: 1.05;
+    color: #000000;
+  }
+
+  .reviewsMarquee {
+    width: 100vw;
+    margin: 10vw 0 0 -7.5vw;
+    overflow: hidden;
+  }
+
+  .reviewsTrack {
+    gap: 10vw;
+    animation-duration: 20s;
+  }
+
+  .reviewCard {
+    width: 74vw;
+    min-height: 40vw;
+    padding: 3.4vw 4.2vw;
+    border-radius: 2vw;
+  }
+
+  .reviewCardTop {
+    gap: 4.5vw;
+  }
+
+  .reviewCardTop img {
+    height: 15vw;
+  }
+
+  .reviewCard h2 {
+    margin-bottom: 2.2vw;
+    font-size: 4.2vw;
+  }
+
+  .reviewTags {
+    gap: 2vw;
+  }
+
+  .reviewTag {
+    min-width: 17vw;
+    padding: 1vw 2.4vw;
+    border-radius: 3vw;
+    font-size: 2.3vw;
+  }
+
+  .reviewCard p {
+    margin-top: 5vw;
+    font-size: 3.5vw;
+    line-height: 1;
+  }
+
+  .aboutSlideCollab .aboutSlideContent {
+    padding-top: 37vw;
+  }
+
+  .aboutCollabText {
+    gap: 6vw;
+    color: #ffffff;
+  }
+
+  .aboutCollabText h2 {
+    color: #ffffff;
+  }
+
+  .aboutCollabText p {
+    max-width: 86vw;
+    color: #ffffff;
+  }
+
+  .aboutHelpRightStars,
+  .aboutPromoMarquee {
+    display: none;
+  }
+
+  #slideHelp:checked ~ .aboutSlideHelp,
+  #slideAlone:checked ~ .aboutSlideHelp,
+  #slideReviews:checked ~ .aboutSlideHelp,
+  #slideCollab:checked ~ .aboutSlideHelp {
+    transform: translateY(0);
+  }
+
+  #slideHelp:checked ~ .aboutSlideAlone {
+    transform: translateY(130vw);
+  }
+
+  #slideHelp:checked ~ .aboutSlideReviews {
+    transform: translateY(145.4vw);
+  }
+
+  #slideHelp:checked ~ .aboutSlideCollab {
+    transform: translateY(160.8vw);
+  }
+
+  #slideAlone:checked ~ .aboutSlideAlone {
+    transform: translateY(15.4vw);
+  }
+
+  #slideAlone:checked ~ .aboutSlideReviews {
+    transform: translateY(145.4vw);
+  }
+
+  #slideAlone:checked ~ .aboutSlideCollab {
+    transform: translateY(160.8vw);
+  }
+
+  #slideReviews:checked ~ .aboutSlideAlone {
+    transform: translateY(15.4vw);
+  }
+
+  #slideReviews:checked ~ .aboutSlideReviews {
+    transform: translateY(30.8vw);
+  }
+
+  #slideReviews:checked ~ .aboutSlideCollab {
+    transform: translateY(160.8vw);
+  }
+
+  #slideCollab:checked ~ .aboutSlideAlone {
+    transform: translateY(15.4vw);
+  }
+
+  #slideCollab:checked ~ .aboutSlideReviews {
+    transform: translateY(30.8vw);
+  }
+
+  #slideCollab:checked ~ .aboutSlideCollab {
+    transform: translateY(46.2vw);
   }
 
   @keyframes mobileWhiteSectorIdleMove {
