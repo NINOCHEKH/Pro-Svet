@@ -590,6 +590,99 @@
     line-height: 1.1;
   }
 
+  .specialistsHeroStars {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5vw;
+    bottom: 0;
+    z-index: 2;
+    display: block;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .specialistsHeroStars img {
+    position: absolute;
+    top: -5vw;
+    width: 16.5vw;
+    height: auto;
+    opacity: 0;
+    animation: specialistsHeroStarFall 4.8s linear infinite;
+  }
+
+  .specialistsHeroStars img:nth-child(1) {
+    left: 12vw;
+    animation-delay: -0.6s;
+  }
+
+  .specialistsHeroStars img:nth-child(2) {
+    left: 25vw;
+    width: 14vw;
+    animation-delay: -2.1s;
+    animation-duration: 5.4s;
+  }
+
+  .specialistsHeroStars img:nth-child(3) {
+    left: 39vw;
+    width: 18.8vw;
+    animation-delay: -1.4s;
+  }
+
+  .specialistsHeroStars img:nth-child(4) {
+    left: 53vw;
+    width: 14.8vw;
+    animation-delay: -3s;
+    animation-duration: 5.8s;
+  }
+
+  .specialistsHeroStars img:nth-child(5) {
+    left: 66vw;
+    width: 17.5vw;
+    animation-delay: -0.2s;
+    animation-duration: 5.1s;
+  }
+
+  .specialistsHeroStars img:nth-child(6) {
+    left: 78vw;
+    width: 13.3vw;
+    animation-delay: -2.7s;
+  }
+
+  .specialistsHeroStars img:nth-child(7) {
+    left: 6vw;
+    width: 14.4vw;
+    animation-delay: -3.7s;
+    animation-duration: 5.6s;
+  }
+
+  .specialistsHeroStars img:nth-child(8) {
+    left: 88vw;
+    width: 17.8vw;
+    animation-delay: -1.8s;
+    animation-duration: 5.2s;
+  }
+
+  @keyframes specialistsHeroStarFall {
+    0% {
+      opacity: 0;
+      transform: translateY(0) rotate(0deg) scale(0.9);
+    }
+
+    12% {
+      opacity: 1;
+    }
+
+    85% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(29vw) rotate(130deg) scale(1.05);
+    }
+  }
+
   .specialistsHeroText p,
   .specialistsAvatarMarquee,
   .specialistsStats {
@@ -618,7 +711,7 @@
 
   .topCategoriesRow {
     width: 100%;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .topCategoriesTrack {
@@ -627,16 +720,16 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 4vw;
-    animation: mobileCategoryMarquee 16s linear infinite;
+    padding-right: 4vw;
+    animation: mobileCategoryMarquee 18s linear infinite;
   }
 
   .topCategoriesRow:nth-child(2) .topCategoriesTrack {
-    animation-name: mobileCategoryMarqueeReverse;
-    animation-duration: 18s;
+    animation-duration: 20s;
   }
 
   .topCategoriesRow:nth-child(3) .topCategoriesTrack {
-    animation-duration: 20s;
+    animation-duration: 22s;
   }
 
   .categoryTagDuplicate {
@@ -644,14 +737,26 @@
   }
 
   .categoryTag {
-    min-width: 15.8vw;
-    padding: 1.5vw 4.2vw 1.7vw;
+    min-width: 18vw;
+    height: 7.4vw;
+    padding: 1.7vw 4.8vw 1.9vw;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex: 0 0 auto;
     border-radius: 5vw;
-    font-size: 3.5vw;
+    font-size: 4.1vw;
+    line-height: 1;
+    white-space: nowrap;
     pointer-events: none;
+  }
+
+  .categoryTagSea {
+    min-width: 36vw;
+    max-width: 36vw;
+    padding-right: 2.6vw;
+    padding-left: 2.6vw;
+    font-size: 3.15vw;
   }
 
   .categoryTag:hover {
@@ -664,17 +769,7 @@
     }
 
     100% {
-      transform: translateX(calc(-50% - 2vw));
-    }
-  }
-
-  @keyframes mobileCategoryMarqueeReverse {
-    0% {
-      transform: translateX(calc(-50% - 2vw));
-    }
-
-    100% {
-      transform: translateX(0);
+      transform: translateX(-33.333%);
     }
   }
 
@@ -721,7 +816,6 @@
     width: 16.8vw;
     height: 16.8vw;
     flex-basis: 16.8vw;
-    border: 0.24vw solid #f7b7c6;
   }
 
   .specialistCard h3 {
@@ -776,6 +870,274 @@
     font-size: 6vw;
   }
 
+  .merchPage {
+    padding-top: 0;
+    background: #ffffff;
+  }
+
+  .merchHero {
+    position: relative;
+    height: 66.7vw;
+    overflow: hidden;
+    border-radius: 0 0 9vw 9vw;
+    background-color: #ffe481;
+  }
+
+  .merchHero .merchHeroDesktopImage {
+    display: none;
+  }
+
+  .merchHeroMobileContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+  }
+
+  .merchHeroMobileContent h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 26vw;
+    z-index: 4;
+    font-family: "TTNormsProM";
+    font-size: 8.7vw;
+    line-height: 1.04;
+    text-align: center;
+    color: #6b86e7;
+  }
+
+  .merchHero .merchHeroMug {
+    position: absolute;
+    z-index: 5;
+    display: block;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  .merchHero .merchHeroMugOne {
+    left: -7vw;
+    bottom: -0.8vw;
+    width: 36vw;
+  }
+
+  .merchHero .merchHeroMugTwo {
+    right: -5vw;
+    bottom: 0;
+    width: 35vw;
+  }
+
+  .merchHeroStar {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    width: 25vw;
+    height: 25vw;
+    background: url("../images/StarAnimation2.svg") center / contain no-repeat;
+    opacity: 0.88;
+    pointer-events: none;
+  }
+
+  .merchHeroStars {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5vw;
+    bottom: 0;
+    z-index: 2;
+    display: block;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .merchHeroStars img {
+    position: absolute;
+    top: -5vw;
+    width: 16.5vw;
+    height: auto;
+    opacity: 0;
+    animation: specialistsHeroStarFall 4.8s linear infinite;
+  }
+
+  .merchHeroStars img:nth-child(1) {
+    left: 12vw;
+    animation-delay: -0.6s;
+  }
+
+  .merchHeroStars img:nth-child(2) {
+    left: 25vw;
+    width: 14vw;
+    animation-delay: -2.1s;
+    animation-duration: 5.4s;
+  }
+
+  .merchHeroStars img:nth-child(3) {
+    left: 39vw;
+    width: 18.8vw;
+    animation-delay: -1.4s;
+  }
+
+  .merchHeroStars img:nth-child(4) {
+    left: 53vw;
+    width: 14.8vw;
+    animation-delay: -3s;
+    animation-duration: 5.8s;
+  }
+
+  .merchHeroStars img:nth-child(5) {
+    left: 66vw;
+    width: 17.5vw;
+    animation-delay: -0.2s;
+    animation-duration: 5.1s;
+  }
+
+  .merchHeroStars img:nth-child(6) {
+    left: 78vw;
+    width: 13.3vw;
+    animation-delay: -2.7s;
+  }
+
+  .merchHeroStars img:nth-child(7) {
+    left: 6vw;
+    width: 14.4vw;
+    animation-delay: -3.7s;
+    animation-duration: 5.6s;
+  }
+
+  .merchHeroStars img:nth-child(8) {
+    left: 88vw;
+    width: 17.8vw;
+    animation-delay: -1.8s;
+    animation-duration: 5.2s;
+  }
+
+  .merchHeroStarOne {
+    left: -8vw;
+    top: 10vw;
+    transform: rotate(-12deg);
+  }
+
+  .merchHeroStarTwo {
+    right: -5vw;
+    top: 7vw;
+    width: 21vw;
+    height: 21vw;
+    transform: rotate(20deg);
+  }
+
+  .merchHeroStarThree {
+    right: 16vw;
+    bottom: 2vw;
+    width: 20vw;
+    height: 20vw;
+    transform: rotate(-18deg);
+  }
+
+  .merchCatalog {
+    padding: 9.6vw 4.3vw 12vw;
+    border-radius: 0;
+    background: #ffffff;
+  }
+
+  .merchSection + .merchSection {
+    margin-top: 10.5vw;
+  }
+
+  .merchSection h1 {
+    margin-bottom: 7.2vw;
+    font-size: 6.8vw;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .merchGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6.2vw 4.3vw;
+  }
+
+  .merchCard {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .merchCardImage {
+    width: 100%;
+    height: 46.8vw;
+    min-height: 0;
+    border-radius: 1.7vw;
+    object-fit: cover;
+  }
+
+  .merchCardInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 3.1vw 0 0;
+  }
+
+  .merchTag,
+  .merchCard p {
+    display: none;
+  }
+
+  .merchCard h2 {
+    order: 2;
+    min-height: 7.4vw;
+    margin: 2.4vw 0 0;
+    font-family: "TTNormsProN";
+    font-size: 2.8vw;
+    line-height: 1.12;
+  }
+
+  .merchPrice {
+    order: 1;
+    gap: 2.6vw;
+    margin-top: 0;
+    align-items: baseline;
+  }
+
+  .merchPrice strong {
+    order: 2;
+    font-size: 4vw;
+    color: #6b86e7;
+  }
+
+  .merchPrice s {
+    order: 1;
+    font-size: 3.6vw;
+    color: #8a8a8a;
+    text-decoration-thickness: 0.24vw;
+  }
+
+  .merchPrice span {
+    display: none;
+  }
+
+  .merchButton {
+    position: static;
+    width: 100%;
+    height: 8.8vw;
+    margin-top: 2.7vw;
+    border-radius: 1vw;
+    font-size: 4.1vw;
+  }
+
+  .merchPromoMarquee {
+    height: 12vw;
+    margin-top: 0;
+    border-radius: 0;
+  }
+
+  .merchPromoMarquee .promoMarqueeTrack span {
+    font-size: 6vw;
+  }
+
   .notFoundNav,
   .notFoundPromoMarquee,
   .notFoundPage + .promoMarquee,
@@ -802,6 +1164,12 @@
     line-height: 0.8;
   }
 
+  .notFoundImage {
+    width: 89vw;
+    left: -5vw;
+    margin-top: -5vw;
+  }
+
   .notFoundStarYellow {
     width: 38vw;
     left: 4vw;
@@ -817,14 +1185,14 @@
   .notFoundButton {
     min-width: 87.5vw;
     height: 13.5vw;
-    margin-top: 23vw;
+    margin-top: 9vw;
     padding: 0 5vw;
-    border: 0.24vw solid #f891a8;
-    border-radius: 1vw;
-    background-color: rgba(248, 145, 168, 0.35);
-    font-family: "TTNormsProN";
-    font-size: 4.8vw;
-    color: #000000;
+    border: 0;
+    border-radius: 4vw;
+    background-color: #f891a8;
+    font-family: "TTNormsProM";
+    font-size: 5.4vw;
+    color: #ffffff;
   }
 
   .aboutAccordion {

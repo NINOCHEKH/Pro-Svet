@@ -46,7 +46,37 @@
 
     <main class="merchPage">
       <section class="merchHero">
-        <img src="images/BannerMerch.png" alt="Скидки на кружки ProSvet" />
+        <img
+          class="merchHeroDesktopImage"
+          src="images/BannerMerch.png"
+          alt="Скидки на кружки ProSvet"
+        />
+        <div class="merchHeroMobileContent" aria-hidden="true">
+          <h1>
+            Скидки на все<br />
+            кружки 25%
+          </h1>
+          <img
+            class="merchHeroMug merchHeroMugOne"
+            src="images/mugMerch1.svg"
+            alt=""
+          />
+          <img
+            class="merchHeroMug merchHeroMugTwo"
+            src="images/mugMerch2.svg"
+            alt=""
+          />
+          <div class="merchHeroStars" aria-hidden="true">
+            <img src="images/StarAnimation.svg" alt="" />
+            <img src="images/StarAnimation4.svg" alt="" />
+            <img src="images/StarAnimation.svg" alt="" />
+            <img src="images/StarAnimation4.svg" alt="" />
+            <img src="images/StarAnimation.svg" alt="" />
+            <img src="images/StarAnimation4.svg" alt="" />
+            <img src="images/StarAnimation.svg" alt="" />
+            <img src="images/StarAnimation4.svg" alt="" />
+          </div>
+        </div>
       </section>
 
       <section class="merchCatalog">
@@ -116,8 +146,8 @@
                 <span class="merchTag">Дневник</span>
                 <h2>Дневник для состояния</h2>
                 <p>
-                  Этот дневник — идеальный способ вести записи о своём
-                  состоянии для себя или специалиста.
+                  Этот дневник — идеальный способ вести записи о своём состоянии
+                  для себя или специалиста.
                   <br /><br />
                   Идеально для поездок, где может не быть интернета.
                 </p>
@@ -156,11 +186,51 @@
     <section class="promoMarquee merchPromoMarquee" aria-label="Акция">
       <div class="promoMarqueeTrack">
         <span>при регистрации первый месяц бесплатно!</span>
-        <span>С 16 апреля по 16 мая при регистрации первый месяц бесплатно!</span>
+        <span
+          >С 16 апреля по 16 мая при регистрации первый месяц бесплатно!</span
+        >
         <span>при регистрации первый месяц бесплатно!</span>
-        <span>С 16 апреля по 16 мая при регистрации первый месяц бесплатно!</span>
+        <span
+          >С 16 апреля по 16 мая при регистрации первый месяц бесплатно!</span
+        >
       </div>
     </section>
+
+    <div class="mobileMenuBackdrop" aria-hidden="true"></div>
+
+    <div class="mobileMenuPanel" aria-hidden="true">
+      <div class="mobileMenuLinks">
+        <a class="mobileMenuLogoLink" href="index.html" data-page="index.html">
+          <img src="images/logoNavDeactivate.svg" alt="ProSvet" />
+        </a>
+        <a class="mobileMenuLink" href="about.html" data-page="about.html"
+          >О нас</a
+        >
+        <a
+          class="mobileMenuLink"
+          href="specialists.html"
+          data-page="specialists.html"
+          >Специалисты</a
+        >
+        <a
+          class="mobileMenuLink"
+          href="subscribe.html"
+          data-page="subscribe.html"
+          >Подписка</a
+        >
+        <a class="mobileMenuLink" href="merch.html" data-page="merch.html"
+          >Мерч</a
+        >
+      </div>
+    </div>
+
+    <nav class="mobileBottomMenu" aria-label="Мобильное меню">
+      <button class="mobileMenuButton" type="button" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
 
     <footer class="footer">
       <div class="footerTop">
