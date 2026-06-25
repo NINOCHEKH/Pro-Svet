@@ -1692,7 +1692,7 @@ body {
   position: relative;
   width: 100%;
   height: 47.8vw;
-  margin-bottom: -5vw;
+  margin-bottom: 4vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1727,6 +1727,7 @@ body {
   width: 52vw;
   height: auto;
   display: block;
+  margin-top: -4vw;
 }
 
 .notFoundStar {
@@ -2116,8 +2117,8 @@ body {
   margin-top: 0.25vw;
   margin-bottom: 0.55vw;
   font-family: "TTNormsProM";
-  font-size: 1.65vw;
-  line-height: 1.7vw;
+  font-size: 1.3vw;
+  line-height: 1.3vw;
 }
 
 .specialistCardTop p,
@@ -2130,7 +2131,7 @@ body {
 }
 
 .specialistMeta {
-  margin-top: 0.35vw;
+  /* margin-top: 0.35vw; */
   margin-left: 7.2vw;
   display: flex;
   flex-direction: column;

@@ -108,6 +108,32 @@ function initMobileSubscribePlans() {
 
 document.addEventListener("DOMContentLoaded", initMobileSubscribePlans);
 
+function initAboutFooterLinks() {
+  const aboutSlideIds = new Set([
+    "slideHelp",
+    "slideAlone",
+    "slideReviews",
+    "slideCollab"
+  ]);
+
+  function activateSlideFromHash() {
+    const slideId = window.location.hash.slice(1);
+
+    if (!aboutSlideIds.has(slideId)) return;
+
+    const slideInput = document.getElementById(slideId);
+
+    if (slideInput) {
+      slideInput.checked = true;
+    }
+  }
+
+  activateSlideFromHash();
+  window.addEventListener("hashchange", activateSlideFromHash);
+}
+
+document.addEventListener("DOMContentLoaded", initAboutFooterLinks);
+
 // стерка
 window.addEventListener("load", () => {
   const life = document.querySelector(".life");
